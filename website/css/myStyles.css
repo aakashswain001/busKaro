@@ -1,0 +1,142 @@
+.inputText{
+	width: 200px;
+	height: 30px;
+	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+.selectText{
+	width: 200px;
+	height: 30px;
+	color: white;
+	background-color: transparent;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	padding-left: 10px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	-moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance:none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.button{
+	width: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #339BEB;
+	border-radius: 3px;
+	border: 1px solid #339BEB;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	height: 30px;
+	padding: 3px;
+}
+
+.registerText{
+	width: 50%;
+	min-width: 250px;
+	height: 30px;
+	color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-color: transparent;
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	padding-left: 10px;
+}
+
+.registerText:focus {
+	border-bottom-color: #339BEB;
+	outline: none;
+}
+
+.registerButton {
+	width: 40%;
+	margin-top: 20px;
+	min-width: 250px;
+	margin-bottom: 20px;
+	background-color: #339BEB;
+	border-radius: 3px;
+	border: 1px solid #339BEB;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	height: 30px;
+	padding: 3px;
+}
+
+#registerButtonCustomer{
+	margin-top: 30px;
+}
+
+#regiserButtonService{
+	margin-bottom: 50px;
+}
+
+.imgage-container {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 400px;
+    height: 400px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.image-container img{
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	align-self: center;
+	border-radius: 50%;
+	border: 5px solid white;
+}
+
+.image-container img:hover {
+	opacity: 0.4;
+}
+
+.image-container img:hover .facebook{
+	z-index: 100px;
+	transform: translateY(50%);
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}

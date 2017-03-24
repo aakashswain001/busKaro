@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Buskaro | One stop bus booking website</title>
+		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+
+		<link href="css/myStyles.css" rel="stylesheet">
+
+		<script>
+			$('#myModal').modal('show');
+		</script>
+
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="images/logo.png" width="60" height="60" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="#banner">Buskaro</a></div>
+								<div class="site-slogan">Your one stop bus booking website</div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">Home</a></li>
+												<li><a href="#about">About</a></li>
+												<li><a href="#register">Register</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModal">Sign In</a></li>
+												<li><a href="#contact">Contact</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner" style="background-color: black">
+			<div class="banner-image"></div>
+			<div class="banner-caption" style="margin-top: 0px">
+				<div class="container" style="margin-top: 0px">
+					<div class="row" style="margin-top: 0px">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" style="margin-top: 0px" data-animation-effect="fadeIn">
+							<h2 class="text-center" style="margin-top: 0px">Search <span>Buses</span></h2>
+							<div class="lead text-center">
+								<div class="row">
+									<div class="col-md-6" style="justify-content: right">
+										<input type="text" id="sourceCityId" class="inputText" placeholder="Source City">
+									</div>
+									<div class="col-md-6" style="justify-content: left">
+										<select class="selectText" id="sourceSelect">
+											<option value="1">Source State</option>
+											<option value="odisha">Odisha</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6" style="justify-content: right">
+										<input type="text" id="destinationCityId" class="inputText" placeholder="Destination City">
+									</div>
+									<div class="col-md-6" style="justify-content: left">
+										<select class="selectText" id="destinationSelect">
+											<option value="1">Destination State</option>
+											<option value="odisha">Odisha</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									
+								</div>
+								<div class="row">
+									<input type="submit" value="search" class="button">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="about" class="title text-center">About <span>BusKaro</span></h1>
+						<p class="lead text-center">Primary Online Bus Ticket Booking Platform in Odisha</p>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="images/section-image-1.png" alt="">
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6">
+								<p>Founded in 2017 in Bhubaneswar, India,BusKaro connects various cities across the state with just a click of a button.</p>
+								<p>BusKaro has revolutionized the online bus ticket booking industry by bringing together over 2,000 bus operators covering over many routes across the state and cities.</p>
+								<p>With its mobile app ,we will be getting our loyal customer base,BusKaro aims to be the largest community of bus travellers in the world in the late future.</p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>BusKaro provides bus travellers, the most uncomplicated and hassle-free booking experience ever.</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Choose your destination, select bus based on user ratings, view the seat layout, choose convenient seats, and book your ticket in just a few clicks!</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A dedicated 24*7 customer-care team is available to cater to all the passengers needs while they are on-the- go.</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>  With us, you will be able to book a bus ticket for Sleeper, AC, Semi- Luxury or Luxury coaches (as per your requirement) in a convenient way </li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> We are the most reliable online portal, where you will be able to book bus tickets</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-2 pb-clear">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="register" class="title text-center">Register With <span>Us</span></h1>
+				<div class="space"></div>
+					<div class="row" style="margin-top: 0px">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" style="margin-top: 0px" data-animation-effect="fadeIn">
+							<div class="lead text-center">
+								<div class="row" style="margin-top: 30px;">
+									<input type="text" placeholder="First Name" class="registerText" id="firstName">
+								</div>
+								<div class="row">
+									<input type="text" placeholder="Last Name" class="registerText" id="lastName">
+								</div>
+								<div class="row">
+									<input type="email" placeholder="E-mail" class="registerText" id="email">
+								</div>
+								<div class="row">
+									<input type="password" placeholder="Password" class="registerText" id="password">
+								</div>
+								<div class="row">
+									<input type="password" placeholder="Confirm Password" class="registerText" id="cpassword">
+								</div>
+								<div class="row" style="margin-top: 30px;">
+									<input type="submit" value="Register as a Customer" class="registerButton" id="registerButtonCustomer">
+								</div>
+								<div class="row">
+									<p style="font-size: 15px">or</p>
+								</div>
+								<div class="row" style="margin-bottom: 50px;">
+									<input type="submit" value="Register as a Service Provider" class="registerButton" id="registerButtonService">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- section end -->
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<!-- section end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- .footer start -->
+			<!-- ================ -->
+			<div class="footer section">
+				<div class="container">
+					<h1 class="title text-center" id="contact">Contact Us</h1>
+					<div class="space"></div>
+					<div class="row">
+						<h3 class="large text-center">Meet the <span>Team!</span></h3>
+					</div>
+					<div class="space"></div>
+					<div style="background-color: rgba(0, 0, 0, 0.1); padding: 30px; border-radius: 10px">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<div class="image-container">
+										<img src="images/portfolio-1.jpg">
+									</div>
+									<div class="items">
+										<a class="facebook" href="#"><li class="fa fa-facebook"></li></a>
+										<a class="googleplus" href="#"><li class="fa fa-google-plus"></li></a>
+										<a class="linkedin" href="#"><li class="fa fa-linkedin"></li></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="space"></div>
+					<div class="text-center">
+						<h3 class="large text-center">For further information mail us.</h3>
+					</div>
+					<div class="space"></div>
+								<!--<ul class="social-links">
+									<li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/HtmlCoder/714570988650168"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+									<li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+									<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+									<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+									<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+								</ul>-->
+						<div class="row">
+							<div class="footer-content">
+								<form role="form" id="footer-form">
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer end -->
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+		<!-- popup -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Login" data-toggle="tab">Customer</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Service Provider</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Login">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputPassword1" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            Submit</button>
+                                        <a href="javascript:;">Forgot your password?</a>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="Registration">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email2" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputPassword2" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            Submit</button>
+                                        <a href="javascript:;">Forgot your password?</a>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="OR" class="hidden-xs">
+                            OR</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row text-center sign-with">
+                            <div class="col-md-12">
+                                <h3>
+                                    Sign in with</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
+                                        Google</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            	</div>
+        	</div>
+   			</div>
+		</div>
+
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+
+	</body>
+</html>
