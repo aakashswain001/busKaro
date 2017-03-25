@@ -64,6 +64,11 @@ select::-ms-expand {
 .registerText:focus {
 	border-bottom-color: #339BEB;
 	outline: none;
+	-webkit-transition: border-bottom-color .2s ease-in-out;
+       -moz-transition: border-bottom-color .2s ease-in-out;
+        -ms-transition: border-bottom-color .2s ease-in-out;
+         -o-transition: border-bottom-color .2s ease-in-out;
+            transition: border-bottom-color .2s ease-in-out;
 }
 
 .registerButton {
@@ -88,37 +93,72 @@ select::-ms-expand {
 	margin-bottom: 50px;
 }
 
-.imgage-container {
+.profile-img-container {
     position: relative;
-    display: inline-block;
-    float: left;
-    width: 400px;
-    height: 400px;
-    font-weight: bold;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    display: inline-block; /* added */
+    overflow: hidden;
+    width: 200px;
+    height: 240px;
+    overflow: hidden;
+    padding: 20px;/* added */
 }
 
-.image-container img{
-	width: 150px;
-	height: 150px;
-	vertical-align: middle;
-	align-self: center;
+
+.profile-img-container img {
+	width:100%;
+	height: 80%;
 	border-radius: 50%;
-	border: 5px solid white;
+	vertical-align: middle;
+} /* remove if using in grid system */
+
+.profile-img-container:hover img {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s ease-in 0.2 ease-out;
+       -moz-transition: opacity 0.3s ease-in 0.2 ease-out;
+        -ms-transition: opacity 0.3s ease-in 0.2 ease-out;
+         -o-transition: opacity 0.3s ease-in 0.2 ease-out;
+            transition: opacity 0.3s ease-in 0.2 ease-out;
+}
+.profile-img-container:hover .social [class*="fa fa-"]{
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+       -moz-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+         -o-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in;
 }
 
-.image-container img:hover {
-	opacity: 0.4;
+.social [class*="fa fa-"]:hover {
+	background-color: rgba(51, 155, 235, 0.7);
 }
 
-.image-container img:hover .facebook{
-	z-index: 100px;
-	transform: translateY(50%);
+.profile-img-container .social {
+    margin-top: 7px;
+}
+
+.social [class*="fa fa-"]{
+	margin-top: 5px;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.7);
+    border-radius: 30px;
+    border-color: rgba(51, 155, 235, 0.7);
+    color: #E5E5E5;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
+    width: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.profile-img-conatiner .googleplus {
+	left:50px;
 }
 
 .nav-tabs {
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 .sign-with {
     margin-top: 25px;
@@ -140,3 +180,4 @@ div#OR {
     z-index: 1;
     background: #DFDFDF;
 }
+
