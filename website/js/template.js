@@ -9,6 +9,14 @@
 
 (function($){
 	$(document).ready(function(){
+
+		var heightSlider = $('.navbar').height();
+
+		$('.banner-caption').css({ marginTop : heightSlider + 140 + 'px' });
+
+		var heightBannerCaption = $('#banner-caption-container').height();
+
+		$('.banner').css({height: heightBannerCaption + 'px'});
 	
 		$(".banner-image").backstretch('images/banner.jpg');
 		

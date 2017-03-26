@@ -135,6 +135,7 @@ blockquote {
 	vertical-align: middle;
 	min-height: 100%;
 	width: 100%;
+	height: auto;
 }
 .banner:after {
 	position: absolute;
@@ -147,9 +148,9 @@ blockquote {
 }
 .banner-caption {
 	position: absolute;
-	top: 40%;
+	top: 0%;
 	width: 100%;
-	z-index: 2;
+	z-index: 400;
 }
 .subfooter {
 	background-color: #fafafa;
@@ -422,13 +423,16 @@ textarea {
 /* Modals
 ---------------------------------- */
 .modal-content {
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 .modal-header {
 	background-color: #55acee;
 	color: #ffffff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 .modal-header h4 {
 	color: #ffffff;
@@ -448,6 +452,10 @@ textarea {
 	}
 }
 
+.modal-open[style="padding-right: 17px;"] .navbar-fixed-top,
+.modal-open[style="padding-right: 17px;"] .navbar-fixed-bottom {
+	padding-right: 17px;
+}
 /* Media
 ---------------------------------- */
 .media .fa {
@@ -463,16 +471,24 @@ textarea {
 ----------------------------------------------------------------------------- */
 .header .navbar {
 	margin-bottom: 0;
+	overflow: hidden;
 }
 .main-navigation .navbar-default {
 	background-color: transparent;
 	border: none;
+	overflow: hidden;
 }
 .main-navigation .navbar-default .navbar-nav > li > a {
 	color: #fff;
 	padding: 10px 20px;
 	font-size: 18px;
 	font-weight: 300;
+}
+.min-width{ 
+    overflow-x:auto 
+}
+ul.nav{
+    display:inline-flex
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
 	background-color: transparent;
@@ -485,7 +501,7 @@ textarea {
 @media (min-width:768px) {
 	.main-navigation .navbar-default .navbar-nav > li > a {
 		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 		-webkit-transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
@@ -495,6 +511,7 @@ textarea {
 }
 @media (min-width:768px) and (max-width:991px) {
 	.main-navigation .container-fluid {
+		padding-top: 15px;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -504,6 +521,7 @@ textarea {
 }
 @media (max-width:767px) {
 	.header.navbar-fixed-top {
+		padding-top: 15px;
 		position: absolute;
 	}
 }
