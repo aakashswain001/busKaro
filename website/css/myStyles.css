@@ -264,3 +264,44 @@ div#OR {
     {
         z-index: 9999999;
     }
+
+@media (min-width:768px) and (max-width:991px) {
+	#sign-with{
+		margin-top: 0px;
+	}
+}
+
+@media (max-width:767px) {
+	#sign-with{
+		margin-top: 0px;
+	}
+}
+
+#ordiv{
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+  	padding-left: 5px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+
+@media (max-width:768px){
+	.banner{
+		height:150%;
+	}
+
+	.banner-image{
+		height: 150%;
+	}
+}
