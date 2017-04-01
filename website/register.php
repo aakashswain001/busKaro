@@ -3,10 +3,11 @@
  session_start();
  if( isset($_SESSION['user'])!="" ){
   header("Location: checkuser.php");
+	 exit;
  }
  include_once 'dbconnect.php';
  $error = false;
- $reg = 0;
+ $reg = 5;
 
 //method for signup users
  if ( isset($_GET['reg_customer']) ) {
@@ -30,9 +31,7 @@
   // password encrypt using SHA256();
   $password = hash('sha256', $pass);
   $status = "N";
-	 $ukey1 = rand(10,20).$email;
-	 $ukey = hash('sha256',$ukey1);
-	 unset($ukey1);
+	 $ukey = hash('sha256',$email);
   // if there's no error, continue to signup
   if( !$error ) {
  
@@ -42,7 +41,11 @@
    if ($res) {
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";
-    unset($fname);
+    $fullname = $fname.' '.$lname;
+	$clink = 'http://www.buskaro.in/confirm_reg?ukey='.$ukey;
+	   header("Location: reg_send_mail.php?fullname=$fullname&clink=$clink&email=$email");
+	   exit;
+	   unset($fname);
     unset($ukey);
     unset($lname);
     unset($pass);
@@ -80,9 +83,8 @@ if ( isset($_GET['reg_owner']) ) {
   // password encrypt using SHA256();
   $password = hash('sha256', $pass);
   $status = "N";
-	 $ukey1 = rand(10,20).$email;
-	 $ukey = hash('sha256',$ukey1);
-	 unset($ukey1);
+	 $ukey = hash('sha256',$email);
+	
   // if there's no error, continue to signup
   if( !$error ) {
  
@@ -92,7 +94,11 @@ if ( isset($_GET['reg_owner']) ) {
    if ($res) {
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";
-    unset($fname);
+    $fullname = $fname.' '.$lname;
+		$clink = 'http://www.buskaro.in/confirm_reg?ukey='.$ukey;
+	  header("Location: reg_send_mail.php?fullname=$fullname&clink=$clink&email=$email");
+	   exit;
+	unset($fname);
     unset($ukey);
     unset($lname);
     unset($pass);
@@ -107,4 +113,6 @@ if ( isset($_GET['reg_owner']) ) {
   }
  }
 header("Location: index.php?reg=$reg");
+exit;
+ob_end_flush();
 ?>

@@ -9,11 +9,17 @@ if ( isset( $_SESSION[ 'user' ] ) != "" ) {
 	exit;
 }
 
-if ( $_GET[ 'reg' ] == 1 ) {} else if ( $_GET[ 'reg' ] == '' ) {
+if ( $_GET[ 'reg' ] == 3 ) {
 
-} else {
+	echo 'mailsent';
+} else if ( $_GET[ 'reg' ] == 4 ) {
+	echo 'mail not sent';
+} else if ($_GET['reg']==5){
+	echo 'dberror';
 
-}
+}elseif ($_GET['reg']==1){
+	echo 'dbsuccess';
+}else{}
 
 
 //login part
@@ -240,9 +246,11 @@ if ( isset( $_POST[ 'login' ] ) ) {
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 						×</button>
 				
+
 					<h4 class="modal-title" id="myModalLabel">
 						Login</h4>
 				
+
 				</div>
 				<div class="modal-body">
 					<div class="row">
@@ -262,6 +270,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 											<label for="email" class="col-sm-2 control-label">
 												Email</label>
 										
+
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="email1" placeholder="Email" name="email">
 											</div>
@@ -270,6 +279,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 											<label for="exampleInputPassword1" class="col-sm-2 control-label">
 												Password</label>
 										
+
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="inputPassword1" placeholder="Password" name="password"/>
 											</div>
@@ -281,6 +291,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												<button type="submit" class="btn btn-primary btn-sm" name="signin">
 													Submit</button>
 											
+
 												<a href="javascript:;">Forgot your password?</a>
 											</div>
 										</div>
@@ -292,6 +303,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 											<label for="email" class="col-sm-2 control-label">
 												Email</label>
 										
+
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="email2" placeholder="Email"/>
 											</div>
@@ -300,6 +312,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 											<label for="exampleInputPassword1" class="col-sm-2 control-label">
 												Password</label>
 										
+
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="inputPassword2" placeholder="Password"/>
 											</div>
@@ -311,6 +324,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												<button type="submit" class="btn btn-primary btn-sm">
 													Submit</button>
 											
+
 												<a href="javascript:;">Forgot your password?</a>
 											</div>
 										</div>
@@ -333,12 +347,14 @@ if ( isset( $_POST[ 'login' ] ) ) {
 									<h3>
 										Sign in with</h3>
 								
+
 								</div>
 								<div class="col-md-12">
 									<div class="btn-group btn-group-justified">
 										<a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
 											Google</a>
 									
+
 									</div>
 								</div>
 							</div>
