@@ -239,8 +239,8 @@ if ( isset( $_POST[ 'login' ] ) ) {
 	?>
 	<!-- ================ -->
 	<!-- popup -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-md">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -254,7 +254,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 				</div>
 				<div class="modal-body">
 					<div class="row">
-						<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px; padding-bottom: 20px">
+						<div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px; padding-bottom: 20px">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#Login" data-toggle="tab">Customer</a>
@@ -263,14 +263,12 @@ if ( isset( $_POST[ 'login' ] ) ) {
 								</li>
 							</ul>
 							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane active" id="Login">
+							<div class="tab-content text-center">
+								<div class="tab-pane active text-center" id="Login">
 									<form role="form" class="form-horizontal">
 										<div class="form-group">
 											<label for="email" class="col-sm-2 control-label">
 												Email</label>
-										
-
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="email1" placeholder="Email" name="email">
 											</div>
@@ -329,33 +327,6 @@ if ( isset( $_POST[ 'login' ] ) ) {
 											</div>
 										</div>
 									</form>
-								</div>
-							</div>
-							<div id="OR" class="hidden-xs hidden-sm">
-								OR</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row text-center sign-with">
-								<div class="hidden-md hidden-lg col-md-12" id="ordiv">
-									<p class="text-center">OR</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4" style="margin-top: 0px; padding-top: 0px;">
-							<div class="row text-center sign-with" style="margin-top: 0px; padding-top: 0px;">
-								<div id="sign-with" class="col-md-12" style="margin-top: 0px; padding-top: 0px">
-									<h3>
-										Sign in with</h3>
-								
-
-								</div>
-								<div class="col-md-12">
-									<div class="btn-group btn-group-justified">
-										<a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
-											Google</a>
-									
-
-									</div>
 								</div>
 							</div>
 						</div>

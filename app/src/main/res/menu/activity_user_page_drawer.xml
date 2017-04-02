@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@mipmap/payment"
+            android:title="Payment" />
+        <item
+            android:id="@+id/nav_your_trips"
+            android:icon="@mipmap/yourtrips"
+            android:title="Your Trips" />
+        <item
+            android:id="@+id/nav_free_rides"
+            android:icon="@mipmap/freerides"
+            android:title="Free Rides" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_account_settings"
+                android:icon="@mipmap/accountsettings"
+                android:title="Account Settings" />
+            <item
+                android:id="@+id/nav_app_settings"
+                android:icon="@mipmap/settings"
+                android:title="App Settings" />
+        </menu>
+    </item>
+
+    <item android:title="Others">
+        <menu>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/logout"
+                android:title="Log Out" />
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@mipmap/help"
+                android:title="Help" />
+
+        </menu>
+    </item>
+
+</menu>

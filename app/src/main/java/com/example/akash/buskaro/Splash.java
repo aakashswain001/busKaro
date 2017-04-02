@@ -2,9 +2,11 @@ package com.example.akash.buskaro;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -42,12 +44,19 @@ public class Splash extends AppCompatActivity {
         fadeInAnimation.setFillEnabled(true);
         logo.startAnimation(fadeInAnimation );
 
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int height = size.y;
+
+        float ydest = height/2 - logo.getHeight();
+        ydest = ydest/(1.5f*(float)height);
+
         TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0,
-                Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_PARENT, -0.3f);
+                Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_PARENT, -ydest);
         translateAnimation.setDuration(1000);
-        ScaleAnimation scale = new ScaleAnimation(1f, 1.1f, 1f, 1.1f);
-        scale.setDuration(500);
-        scale.setStartOffset(500);
+        ScaleAnimation scale = new ScaleAnimation(0.8f, 1f, 0.8f, 1f);
+        scale.setDuration(300);
         fadeInAnimation.setDuration(1000);
         fadeInAnimation.setStartOffset(0);
 

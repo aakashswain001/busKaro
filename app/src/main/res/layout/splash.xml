@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bus"
             android:textColor="#ffffff"
-            android:textSize="28sp" />
+            android:textSize="32sp" />
 
         <TextView
             android:id="@+id/siteNameKaro"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/karo"
             android:textColor="@color/colorAccent"
-            android:textSize="28sp" />
+            android:textSize="32sp" />
 
     </LinearLayout>
 

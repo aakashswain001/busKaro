@@ -16,7 +16,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:background="#000000"/>
 
     <RelativeLayout
@@ -38,12 +38,6 @@
             android:layout_marginBottom="8dp"
             android:visibility="gone" />
 
-        <ScrollView
-            android:id="@+id/login_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-
             <LinearLayout
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
@@ -51,12 +45,14 @@
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
+                android:layout_centerInParent="true"
                 android:focusableInTouchMode="true">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    android:theme="@style/TextLabel"
+                    android:padding="8dp">
 
                     <AutoCompleteTextView
                         android:id="@+id/fname"
@@ -68,14 +64,16 @@
                         android:focusableInTouchMode="true"
                         android:textColor="#ffffff"
                         android:textSize="16sp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:imeOptions="actionNext" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    android:theme="@style/TextLabel"
+                    android:padding="8dp">
 
                     <AutoCompleteTextView
                         android:id="@+id/lname"
@@ -87,14 +85,16 @@
                         android:focusableInTouchMode="true"
                         android:textColor="#ffffff"
                         android:textSize="16sp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:imeOptions="actionNext" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    android:theme="@style/TextLabel"
+                    android:padding="8dp">
 
                     <AutoCompleteTextView
                         android:id="@+id/email"
@@ -106,14 +106,16 @@
                         android:focusableInTouchMode="true"
                         android:textColor="#ffffff"
                         android:textSize="16sp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:imeOptions="actionNext" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    android:theme="@style/TextLabel"
+                    android:padding="8dp">
 
                     <EditText
                         android:id="@+id/password"
@@ -134,7 +136,8 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    android:theme="@style/TextLabel"
+                    android:padding="8dp">
 
                     <EditText
                         android:id="@+id/confirmPassword"
@@ -167,58 +170,7 @@
                     android:text="@string/create_an_account"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:paddingTop="15dp"
-                    android:text="@string/or"
-                    android:textColor="@color/color_gray"
-                    android:textSize="16sp"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/signInWithText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        android:text="@string/sign_up_with"
-                        android:textColor="#ffffff"
-                        android:textSize="18sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/signInWithText"
-                        android:layout_centerHorizontal="true">
-
-                        <ImageView
-                            android:id="@+id/facebookIcon"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:padding="5dp"
-                            android:src="@drawable/facebook_icon"
-                            android:layout_margin="20dp" />
-
-                        <ImageView
-                            android:id="@+id/googlePlusIcon"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:padding="3dp"
-                            android:src="@drawable/google_plus_icon"
-                            android:layout_margin="20dp" />
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-
             </LinearLayout>
-        </ScrollView>
 
         <TextView
             android:id="@+id/signInText"

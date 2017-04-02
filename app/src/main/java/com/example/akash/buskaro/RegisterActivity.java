@@ -79,12 +79,16 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
+        mEmailView.setNextFocusDownId(R.id.password);
         fname = (AutoCompleteTextView) findViewById(R.id.fname);
         populateAutoComplete();
+        fname.setNextFocusDownId(R.id.lname);
         lname = (AutoCompleteTextView) findViewById(R.id.lname);
         populateAutoComplete();
+        lname.setNextFocusDownId(R.id.email);
 
         mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView.setNextFocusDownId(R.id.confirmPassword);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -128,6 +132,10 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                         mEmailView.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
                             mEmailView.clearFocus();
+                            mPasswordView.clearFocus();
+                            fname.clearFocus();
+                            lname.clearFocus();
+                            confirmPassword.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -136,7 +144,11 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                         Rect outRect = new Rect();
                         mPasswordView.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mEmailView.clearFocus();
                             mPasswordView.clearFocus();
+                            fname.clearFocus();
+                            lname.clearFocus();
+                            confirmPassword.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -145,7 +157,11 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                         Rect outRect = new Rect();
                         fname.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mEmailView.clearFocus();
                             mPasswordView.clearFocus();
+                            fname.clearFocus();
+                            lname.clearFocus();
+                            confirmPassword.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -154,7 +170,11 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                         Rect outRect = new Rect();
                         lname.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mEmailView.clearFocus();
                             mPasswordView.clearFocus();
+                            fname.clearFocus();
+                            lname.clearFocus();
+                            confirmPassword.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -163,7 +183,11 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                         Rect outRect = new Rect();
                         confirmPassword.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mEmailView.clearFocus();
                             mPasswordView.clearFocus();
+                            fname.clearFocus();
+                            lname.clearFocus();
+                            confirmPassword.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -174,6 +198,21 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         });
 
         signInText = (TextView) findViewById(R.id.signInText);
+
+        InputMethodManager imm = (InputMethodManager) getApplicationContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (imm.isAcceptingText()) {
+            signInText.setVisibility(View.INVISIBLE);
+        } else {
+            signInText.setVisibility(View.VISIBLE);
+            mEmailView.clearFocus();
+            mPasswordView.clearFocus();
+            fname.clearFocus();
+            lname.clearFocus();
+            confirmPassword.clearFocus();
+        }
+
         signInText.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

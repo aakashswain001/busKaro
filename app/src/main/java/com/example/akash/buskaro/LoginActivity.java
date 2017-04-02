@@ -1,5 +1,6 @@
 package com.example.akash.buskaro;
 
+import android.accessibilityservice.AccessibilityService;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -36,6 +37,7 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,6 +79,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
+        mEmailView.setNextFocusDownId(R.id.password);
         mEmailView.setFocusable(false);
         mEmailView.setFocusableInTouchMode(true);
 
@@ -92,18 +95,23 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.signInButton);
+        final Button mEmailSignInButton = (Button) findViewById(R.id.signInButton);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                Intent intent = new Intent(LoginActivity.this, UserPage.class);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+                startActivity(intent);
+                finish();
+                //attemptLogin();
             }
         });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        FrameLayout rootLogin = (FrameLayout) findViewById(R.id.rootLogin);
+        RelativeLayout rootLogin = (RelativeLayout) findViewById(R.id.rootLogin);
         rootLogin.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -113,6 +121,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         mEmailView.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
                             mEmailView.clearFocus();
+                            mPasswordView.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -122,6 +131,36 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         mPasswordView.getGlobalVisibleRect(outRect);
                         if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
                             mPasswordView.clearFocus();
+                            mEmailView.clearFocus();
+                            InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                        }
+                    }
+                }
+                return false;
+            }
+        });
+
+        mLoginFormView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if (mEmailView.isFocused()) {
+                        Rect outRect = new Rect();
+                        mEmailView.getGlobalVisibleRect(outRect);
+                        if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mEmailView.clearFocus();
+                            mPasswordView.clearFocus();
+                            InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                        }
+                    }
+                    if (mPasswordView.isFocused()) {
+                        Rect outRect = new Rect();
+                        mPasswordView.getGlobalVisibleRect(outRect);
+                        if (!outRect.contains((int)event.getRawX(), (int)event.getRawY())) {
+                            mPasswordView.clearFocus();
+                            mEmailView.clearFocus();
                             InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                         }
@@ -133,6 +172,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         registerButton = (Button) findViewById(R.id.registerButton);
 
+        InputMethodManager imm = (InputMethodManager) getApplicationContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (imm.isAcceptingText()) {
+            registerButton.setVisibility(View.INVISIBLE);
+        } else {
+            registerButton.setVisibility(View.VISIBLE);
+            mEmailView.clearFocus();
+            mPasswordView.clearFocus();
+        }
+
         registerButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,6 +193,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 finish();
             }
         });
+
 
     }
 
