@@ -7,3 +7,111 @@ Created:November 2014
 License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
 File Description: Place here your custom CSS styles
 */
+
+.panel-default1 {
+  border-color: #333333;
+  margin: 30px;
+}
+.panel-default1 > .panel-heading {
+  color: #333;
+  background-color: #333333;
+  border-color: #ddd;
+}
+.panel-default1 > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+.panel-default1 > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-default1 > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
+}
+.panel-primary1 {
+  border-color: #428bca;
+  margin-left:30px;
+  margin-right:30px;
+}
+.panel-primary1 > .panel-heading {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+.panel-primary1 > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #428bca;
+}
+.panel-primary1 > .panel-heading .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.panel-primary1 > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #428bca;
+}
+
+.panel-primary1 a{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	float: right;
+	background-color: #428bca;
+}
+.panel-primary1 a:hover{
+	background-color: #428bca;
+}
+.panel-heading a:after {
+    font-family: "FontAwesome";
+    content: "\f040";
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    top: 50%;
+    line-height: 1;
+    margin-top: -7px;
+}
+
+
+.media-object{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.btn-round{
+	border-radius: 30px;
+	margin: 30px;
+}
+.section1 {
+	background-color: #ffffff;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.ourbtn1{
+  display: inline-block;
+	background-color: #428bca;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: none;
+}
+.ourbtn1:hover,
+.ourbtn1:focus,
+.ourbtn1.focus {
+  color: #333;
+  text-decoration: none;
+}
+
