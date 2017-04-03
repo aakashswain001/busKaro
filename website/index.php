@@ -42,7 +42,6 @@ if ( isset( $_POST[ 'signin' ] ) ) {
 	unset($email);
 }
 if ( isset( $_POST[ 'signin2' ] ) ) {
-	
 	// prevent sql injections/ clear user invalid inputs
 		$email = trim( $_POST[ 'email2' ] );
 		$email = strip_tags( $email );
@@ -59,8 +58,8 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 			if ( $count = 1 ) {
 				if ( $count == 1 && $row[ 'password' ] == $password ) {
 					$_SESSION[ 'user' ] = $row[ 'id' ];
-					$_SESSION[ 'user_type' ] = "0";
-					header( "Location: ownerdash.html" );
+					$_SESSION[ 'user_type' ] = "1";
+					header( "Location: ownerdash.php" );
 					exit();
 				} else {
 			echo '<script type = "text/javascript">alert("Username or Password incorrect");</script>';	
@@ -294,7 +293,7 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 									</form>
 								</div>
 								<div class="tab-pane" id="Registration">
-									<form role="form" class="form-horizontal">
+									<form role="form" method="post" class="form-horizontal">
 										<div class="form-group">
 											<label for="email" class="col-sm-2 control-label">
 												Email</label>

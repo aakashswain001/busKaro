@@ -6,15 +6,12 @@ if($_SESSION['user_type']==0){
 	exit();
 }else if ($_SESSION['user_type']==1){
 	//owner
-	header("Location: ownerdash.html");
+	header("Location: ownerdash.php");
 	exit();
 	
 }else{
-	session_reset();
-	session_abort();
-	header("Location: index.php");
+	header("Location: include/signout.php");
 	exit();
-	
 }
 
 ?>

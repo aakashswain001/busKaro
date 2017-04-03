@@ -79,9 +79,9 @@ if ( isset($_GET['reg_owner']) ) {
   $pass = htmlspecialchars($pass);
   
   // password encrypt using SHA256();
-  $password = hash('sha256', $pass);
+  $password = md5($pass);
   $status = "N";
-	 $ukey = hash('sha256',$email);
+	 $ukey = md5($email);
 	
   // if there's no error, continue to signup
   if( !$error ) {
