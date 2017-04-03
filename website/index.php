@@ -9,79 +9,72 @@ if ( isset( $_SESSION[ 'user' ] ) != "" ) {
 	exit;
 }
 
-if ( $_GET[ 'reg' ] == 3 ) {
-
-	echo 'mailsent';
-} else if ( $_GET[ 'reg' ] == 4 ) {
-	echo 'mail not sent';
-} else if ($_GET['reg']==5){
-	echo 'dberror';
-
-}elseif ($_GET['reg']==1){
-	echo 'dbsuccess';
-}else{}
-
-
-//login part
-if ( isset( $_POST[ 'login' ] ) ) {
+if ( isset( $_POST[ 'signin' ] ) ) {
+	
 	// prevent sql injections/ clear user invalid inputs
-	$email = trim( $_POST[ 'email' ] );
-	$email = strip_tags( $email );
-	$email = htmlspecialchars( $email );
-	$pass = trim( $_POST[ 'password' ] );
-	$pass = strip_tags( $pass );
-	$pass = htmlspecialchars( $pass );
-	$type = trim( $_POST[ 'type' ] );
-	$type = strip_tags( $type );
-	$type = htmlspecialchars( $type );
-
-	// prevent sql injections / clear user invalid inputs
-	if ( empty( $email ) ) {
-		echo "<script type='text/javascript'>alert('Please enter your email address.');</script>";
-	} else if ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
-		echo "<script type='text/javascript'>alert('Please enter valid email address.');</script>";
-	}
-
-	if ( empty( $pass ) ) {
-		echo "<script type='text/javascript'>alert('Please enter your password.');</script>";
-	}
-	// if there's no error, continue to login
-	$password = hash( 'sha256', $pass ); // password hashing using SHA256
-	///for bus users	 
-	if ( $type == "bus_user" ) {
-		$res = mysql_query( "SELECT id, fname, password FROM bus_users WHERE email='$email'" );
-		$row = mysql_fetch_array( $res );
-		$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
-		if ( $count = 1 ) {
-			if ( $count == 1 && $row[ 'password' ] == $password ) {
-				$_SESSION[ 'user' ] = $row[ 'id' ];
-				$tp = 0;
-				$_SESSION[ 'user' ] = $tp;
-				header( "Location: home.php" );
-			} else {
-				echo "<script type='text/javascript'>alert('Incorrect Credentials, Try again...');</script>";
+		$email = trim( $_POST[ 'email' ] );
+		$email = strip_tags( $email );
+		$email = htmlspecialchars( $email );
+		$pass = trim( $_POST[ 'password' ] );
+		$pass = strip_tags( $pass );
+		$pass = htmlspecialchars( $pass );
+		// if there's no error, continue to login
+		$password = md5( $pass ); // password hashing using SHA256
+	//for bus users	 
+			$res = mysql_query( "SELECT id,password FROM bus_users WHERE email='$email'" );
+			$row = mysql_fetch_array( $res );
+			$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
+			if ( $count = 1 ) {
+				if ( $count == 1 && $row[ 'password' ] == $password ) {
+					$_SESSION[ 'user' ] = $row[ 'id' ];
+					$_SESSION[ 'user_type' ] = "0";
+					header( "Location: home.php" );
+					exit();
+				} else {
+			echo '<script type = "text/javascript">alert("Username or Password incorrect");</script>';
+				}
 			}
-		}
-	} else {
-		//for ownwers
-		$res = mysql_query( "SELECT id, fname, password FROM com_users WHERE email='$email'" );
-		$row = mysql_fetch_array( $res );
-		$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
-		if ( $count == 1 && $row[ 'password' ] == $password ) {
-			$_SESSION[ 'user' ] = $row[ 'id' ];
-			$tp = 1;
-			$_SESSION[ 'typeof' ] = $tp;
-			header( "Location: ownerdash.html" );
-		} else {
-			echo "<script type='text/javascript'>alert('Incorrect Credentials, Try again...');</script>";
-		}
-	}
-
-	unset( $email );
-	unset( $password );
-	unset( $pt );
-	unset( $pass );
+	unset($pass);
+	unset($password);
+	unset($count);
+	unset($res);
+	unset($row);
+	unset($email);
 }
+if ( isset( $_POST[ 'signin2' ] ) ) {
+	
+	// prevent sql injections/ clear user invalid inputs
+		$email = trim( $_POST[ 'email2' ] );
+		$email = strip_tags( $email );
+		$email = htmlspecialchars( $email );
+		$pass = trim( $_POST[ 'password2' ] );
+		$pass = strip_tags( $pass );
+		$pass = htmlspecialchars( $pass );
+		// if there's no error, continue to login
+		$password = md5( $pass ); // password hashing using SHA256
+	//for bus users	 
+			$res = mysql_query( "SELECT id,password FROM bus_owners WHERE email='$email'" );
+			$row = mysql_fetch_array( $res );
+			$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
+			if ( $count = 1 ) {
+				if ( $count == 1 && $row[ 'password' ] == $password ) {
+					$_SESSION[ 'user' ] = $row[ 'id' ];
+					$_SESSION[ 'user_type' ] = "0";
+					header( "Location: ownerdash.html" );
+					exit();
+				} else {
+			echo '<script type = "text/javascript">alert("Username or Password incorrect");</script>';	
+				}
+			}
+	
+	unset($pass);
+	unset($password);
+	unset($count);
+	unset($res);
+	unset($row);
+	unset($email);
+}
+
 ?>
 
 
@@ -247,9 +240,11 @@ if ( isset( $_POST[ 'login' ] ) ) {
 						×</button>
 				
 
+
 					<h4 class="modal-title" id="myModalLabel">
 						Login</h4>
 				
+
 
 				</div>
 				<div class="modal-body">
@@ -265,10 +260,11 @@ if ( isset( $_POST[ 'login' ] ) ) {
 							<!-- Tab panes -->
 							<div class="tab-content text-center">
 								<div class="tab-pane active text-center" id="Login">
-									<form role="form" class="form-horizontal">
+									<form role="form" method = "post" class="form-horizontal">
 										<div class="form-group">
 											<label for="email" class="col-sm-2 control-label">
 												Email</label>
+										
 											<div class="col-sm-10">
 												<input type="email" class="form-control" id="email1" placeholder="Email" name="email">
 											</div>
@@ -278,8 +274,9 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												Password</label>
 										
 
+
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="inputPassword1" placeholder="Password" name="password"/>
+												<input type="password" class="form-control" id="inputPassword1" placeholder="Password" name="password"/>
 											</div>
 										</div>
 										<div class="row">
@@ -289,6 +286,7 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												<button type="submit" class="btn btn-primary btn-sm" name="signin">
 													Submit</button>
 											
+
 
 												<a href="javascript:;">Forgot your password?</a>
 											</div>
@@ -302,8 +300,9 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												Email</label>
 										
 
+
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="email2" placeholder="Email"/>
+												<input type="email" class="form-control" id="email2" placeholder="Email" name = "email2"/>
 											</div>
 										</div>
 										<div class="form-group">
@@ -311,17 +310,19 @@ if ( isset( $_POST[ 'login' ] ) ) {
 												Password</label>
 										
 
+
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="inputPassword2" placeholder="Password"/>
+												<input type="password" class="form-control" id="inputPassword2" placeholder="Password" name= "password2"/>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-2">
 											</div>
 											<div class="col-sm-10">
-												<button type="submit" class="btn btn-primary btn-sm">
+												<button type="submit" name ="signin2" class="btn btn-primary btn-sm">
 													Submit</button>
 											
+
 
 												<a href="javascript:;">Forgot your password?</a>
 											</div>
@@ -371,7 +372,6 @@ if ( isset( $_POST[ 'login' ] ) ) {
 	<!-- Include Date Range Picker -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
 	<script>
 		$( document ).ready( function () {
 			var date_input = $( 'input[name="date"]' ); //our date input has the name "date"
@@ -386,5 +386,4 @@ if ( isset( $_POST[ 'login' ] ) ) {
 		} );
 	</script>
 </body>
-
 </html>

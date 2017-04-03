@@ -41,7 +41,7 @@
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";
     $fullname = $fname.' '.$lname;
-	$clink = 'http://www.buskaro.in/confirm_reg?ukey='.$ukey;
+	$clink = 'http://www.buskaro.in/confirm_reg?ukey='.'u1'.$ukey;
 	   header("Location: reg_send_mail.php?fullname=$fullname&clink=$clink&email=$email");
 	   exit;
 	   unset($fname);
@@ -93,7 +93,7 @@ if ( isset($_GET['reg_owner']) ) {
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";
     $fullname = $fname.' '.$lname;
-		$clink = 'http://www.buskaro.in/confirm_reg?ukey='.$ukey;
+		$clink = 'http://www.buskaro.in/confirm_reg?ukey='.'u2'.$ukey;
 	  header("Location: reg_send_mail.php?fullname=$fullname&clink=$clink&email=$email");
 	   exit;
 	unset($fname);

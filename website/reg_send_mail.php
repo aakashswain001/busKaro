@@ -86,13 +86,10 @@ try {
 	$mail->AltBody = $message;
 
 	if ( $mail->Send() ) {
-
-		$reg = 3;
 	}
 
 } catch ( phpmailerException $ex ) {
-	$reg = 4;
 }
-header( "Location: index.php?reg=$reg" );
+header( "Location: index.php" );
 exit;
 ?>

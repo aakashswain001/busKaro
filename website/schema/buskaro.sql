@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2017 at 06:56 PM
+-- Generation Time: Apr 03, 2017 at 10:41 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -53,10 +53,10 @@ CREATE TABLE `bus_users` (
   `id` int(10) NOT NULL,
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
-  `password` varchar(13) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `email` varchar(30) NOT NULL,
   `status` varchar(3) NOT NULL,
-  `ukey` varchar(13) NOT NULL
+  `ukey` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -64,14 +64,7 @@ CREATE TABLE `bus_users` (
 --
 
 INSERT INTO `bus_users` (`id`, `fname`, `lname`, `password`, `email`, `status`, `ukey`) VALUES
-(1, 'Akash', 'Swain', '5e0cf7bd1dfa3', 'aakashswain003@gmail.com', 'N', '3e14f1115bb6e'),
-(2, 'Akash', 's', 'e3b0c44298fc1', '', 'N', '6b51d431df5d7'),
-(3, 'Akash', 'SAD', 'c38777d1619a8', 'aakashswain0012@gmail.com', 'N', '9b9195a0fdd58'),
-(5, 'Akash', 'Swain', '5e0cf7bd1dfa3', 'aakashswain0031@gmail.com', 'N', '4e8936e899626'),
-(7, 'Akash', 'Swain', '8dc8c84012c87', 'aakashswain003d@gmail.com', 'N', 'd9321ead101bb'),
-(9, 'Akash', 'skn', '6783e4bc3c3fc', 'lshj@kjc', 'N', '399d13908b94f'),
-(10, 'Akash', 'Swain', 'd5972647735e0', 'aakashswain005@gmail.com', 'N', '4e8936e899626'),
-(11, 'Akash', 'Swain', '5e0cf7bd1dfa3', 'aakashswain001@gmail.com', 'N', '4e8936e899626');
+(1, 'Akash', 'Swain', 'efc559751d100923dd6746f4d733f7cc', 'aakashswain001@gmail.com', 'N', '48ed177e4fdceba1befb81e18180e5fb');
 
 --
 -- Indexes for dumped tables
@@ -104,7 +97,7 @@ ALTER TABLE `bus_owners`
 -- AUTO_INCREMENT for table `bus_users`
 --
 ALTER TABLE `bus_users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
