@@ -86,32 +86,77 @@ File Description: Place here your custom CSS styles
 	padding-left: 0;
 	padding-right: 0;
 }
-.ourbtn1{
-  display: inline-block;
-	background-color: #428bca;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  float: right;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-image: none;
-  border: none;
-}
-.ourbtn1:hover,
-.ourbtn1:focus,
-.ourbtn1.focus {
-  color: #333;
-  text-decoration: none;
-}
+.sectionsearch {
+	background-color: #ffffff;
+	padding-top: 102px;
 
+}
+.panelsearch > .panel-heading{
+  min-height: 100px;
+  color: #fff;
+  background-color:  #bce8f1;
+  border-color:  #bce8f1;
+}
+#my > h3{
+	display: inline-table;
+}
+#mydate{
+	padding-left: 350px;
+}
+#mobtn{
+	float: right;
+	margin-top: 20px;
+}
+#momod{
+	width: 50%;
+}
+@media (max-width: 1000px) {
+#my > h3{
+	display: block;
+}
+	#mydate{
+		padding-left: 0px;
+	}
+	#mobtn{
+		float: none;
+		margin-top: 0;
+	}
+	#momod{
+		width: auto;
+	}
+	
+}
+#mytable {
+  width: inherit;
+  max-width: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
+  margin-bottom: 0;
+}
+#mypanelhead{
+	width: 95%;
+	max-width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.table-striped > tbody > tr:nth-child(odd) a{
+    background-color: #f9f9f9;
+	color: black;
+	margin: 0;
+	padding: 0;
+
+}
+.table-striped > tbody > tr:nth-child(even) a{
+    background-color: #f5f5ff;
+	color: black;
+	margin: 0;
+	padding: 0;
+
+}
+#mypan a:hover{
+	text-decoration: underline;
+	color: #428bca;
+}
+#mypan a::after{
+	content: "";
+}
