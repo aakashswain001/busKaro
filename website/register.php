@@ -7,7 +7,6 @@
  }
  include_once 'dbconnect.php';
  $error = false;
- $reg = 5;
 
 //method for signup users
  if ( isset($_GET['reg_customer']) ) {
@@ -29,9 +28,9 @@
   $pass = htmlspecialchars($pass);
   
   // password encrypt using SHA256();
-  $password = hash('sha256', $pass);
+  $password = md5( $pass);
   $status = "N";
-	 $ukey = hash('sha256',$email);
+	 $ukey = md5($email);
   // if there's no error, continue to signup
   if( !$error ) {
  
@@ -51,7 +50,6 @@
     unset($pass);
     unset($password);
     unset($email);
-	   $reg=1;
    } else {
     $errTyp = "danger";
     $errMSG = "Something went wrong, try again later..."; 
@@ -104,7 +102,6 @@ if ( isset($_GET['reg_owner']) ) {
     unset($pass);
     unset($password);
     unset($email);
-	   $reg=1;
    } else {
     $errTyp = "danger";
     $errMSG = "Something went wrong, try again later..."; 
@@ -112,7 +109,7 @@ if ( isset($_GET['reg_owner']) ) {
     
   }
  }
-header("Location: index.php?reg=$reg");
+header("Location: index.php");
 exit;
 ob_end_flush();
 ?>
