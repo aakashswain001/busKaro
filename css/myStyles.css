@@ -1,0 +1,306 @@
+.inputText{
+	width: 200px;
+	height: 30px;
+	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+.inputText, .selectText {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+ 
+.inputText:focus, .selectText:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.upperinput{
+	margin-top: 0px;
+}
+
+.selectText{
+	width: 200px;
+	height: 30px;
+	color: white;
+	background-color: transparent;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	padding-left: 10px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	-moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance:none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+option{
+	background-color: black;
+	color:white;
+	border-color: black;
+}
+
+option:hover{
+	background-color: #55ccee;
+	border-color: #55ccee;
+	color: white;
+}
+
+.button{
+	width: 195px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #339BEB;
+	border-radius: 3px;
+	border: 1px solid #339BEB;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	height: 35px;
+	vertical-align: middle;
+}
+
+.button:hover {
+	background-color: rgba(51, 155, 235, 0.8);
+	-webkit-transition: opacity .5s ease-in-out;
+       -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+         -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+}
+
+.registerText{
+	width: 50%;
+	min-width: 250px;
+	height: 30px;
+	color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding: 3px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-color: transparent;
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	padding-left: 10px;
+}
+
+.registerText:focus {
+	border-bottom-color: #339BEB;
+	outline: none;
+	-webkit-transition: border-bottom-color .2s ease-in-out;
+       -moz-transition: border-bottom-color .2s ease-in-out;
+        -ms-transition: border-bottom-color .2s ease-in-out;
+         -o-transition: border-bottom-color .2s ease-in-out;
+            transition: border-bottom-color .2s ease-in-out;
+}
+
+.registerButton {
+	width: 40%;
+	margin-top: 20px;
+	min-width: 250px;
+	margin-bottom: 20px;
+	background-color: #339BEB;
+	border-radius: 3px;
+	border: 1px solid #339BEB;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	height: 30px;
+	padding: 3px;
+}
+
+#registerButtonCustomer{
+	margin-top: 30px;
+}
+
+#regiserButtonService{
+	margin-bottom: 50px;
+}
+
+.profile-img-container {
+    position: relative;
+    display: inline-block; /* added */
+    overflow: hidden;
+    width: 200px;
+    height: 240px;
+    padding: 20px;/* added */
+}
+
+
+.profile-img-container img {
+	width:100%;
+	height: 80%;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: 3px solid white;
+} /* remove if using in grid system */
+
+.profile-img-container:hover img {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s ease-in 0.2 ease-out;
+       -moz-transition: opacity 0.3s ease-in 0.2 ease-out;
+        -ms-transition: opacity 0.3s ease-in 0.2 ease-out;
+         -o-transition: opacity 0.3s ease-in 0.2 ease-out;
+            transition: opacity 0.3s ease-in 0.2 ease-out;
+}
+.profile-img-container:hover .social [class*="fa fa-"]{
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+       -moz-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+         -o-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+a::-moz-focus-inner { 
+  border: 0; 
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+.social [class*="fa fa-"]:active {
+	border: 0;
+	outline: 0;
+}
+
+a, a:visited, a:focus, a:active, a:hover{
+    outline:0 none !important;
+}
+
+.social [class*="fa fa-"]:hover {
+	outline: none;
+	outline: 0;
+	background-color: rgba(51, 155, 235, 0.7);
+	border: 0;
+}
+
+.profile-img-container .social {
+    margin-top: 0px;
+}
+
+.social [class*="fa fa-"]{
+	opacity: 0;
+	background-color: rgba(0,0,0,0.7);
+    border-radius: 30px;
+    border-color: rgba(51, 155, 235, 0.7);
+    color: #E5E5E5;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
+    margin-top: 0px;
+    width: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.profile-img-conatiner .googleplus {
+	left:50px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.profile-img-container p{
+	line-height: 10px;
+	margin-top: 5px;
+	font-size: 14px;
+	color: gray;
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+
+#form-group{
+	max-width:280px;
+}
+
+#ui-datepicker-div
+    {
+        z-index: 9999999;
+    }
+
+@media (min-width:768px) and (max-width:991px) {
+	#sign-with{
+		margin-top: 0px;
+	}
+}
+
+@media (max-width:767px) {
+	#sign-with{
+		margin-top: 0px;
+	}
+}
+
+#ordiv{
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+  	padding-left: 5px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+
+@media (max-width:768px){
+	.banner{
+		height:150%;
+	}
+
+	.banner-image{
+		height: 150%;
+	}
+}

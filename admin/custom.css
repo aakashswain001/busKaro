@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn{
+	width: 300px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	box-shadow:blur-radius:2
+}
