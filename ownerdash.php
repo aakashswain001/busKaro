@@ -61,7 +61,7 @@ include 'include/headertype3.php';
 			<div class="panel panel-default1">
 				<div class="panel-heading">
 				<div class="text-center">
-				<button type="button" class="btn btn-warning btn-round"><i class="fa fa-bus fa-3x"></i></button>
+				<button type="button" class="btn btn-warning btn-round"><i class="fa fa-bus fa-3x" id="thisbtn" data-toggle="modal" data-target="#myModal3"></i></button>
 				</div>
 				</div>
 			</div>
@@ -150,6 +150,91 @@ include 'include/headertype3.php';
 			</div>
 		</div>
 		<hr>
+		
+		
+		<!--code for add bus modal-->
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						×</button>
+				
+
+					<h4 class="modal-title" id="myModalLabel">
+						Add Bus</h4>
+				
+
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px; padding-bottom: 20px">
+							<!-- Nav tabs -->
+							 <form class="form-horizontal">
+   								 <div class="form-group">
+							      <label class="control-label col-sm-2" for="busname">BusName</label>
+     								 <div class="col-sm-10">          
+       									 <input type="text" class="form-control" id="busname" placeholder="Enter name of bus">
+     								 </div>
+    							</div>
+   								 <div class="form-group">
+    								  <label class="control-label col-sm-2" for="From">From:</label>
+     									 <div class="col-sm-10">
+      										  <input type="text" class="form-control" id="from" placeholder="Enter starting point">
+     									 </div>
+    							</div>
+   								 <div class="form-group">
+      								<label class="control-label col-sm-2" for="to">To:</label>
+      									<div class="col-sm-10">          
+        									<input type="text" class="form-control" id="to" placeholder="Enter destination">
+      									</div>
+    							</div>
+      							<div class="form-group">
+      								<label class="control-label col-sm-2" for="seats">Total no of seats:</label>
+      								<div class="col-sm-10">          
+        								<input type="number" class="form-control" id="seats" placeholder="Enter total no of seats">
+      								</div>
+    							</div> 
+      							<div class="form-group">
+      								<label class="control-label col-sm-2" for="days">Commutes on:</label>
+      								<div class="col-sm-10">          
+        								<input type="text" class="form-control" id="days" placeholder="The days on which the bus travels">
+      								</div>
+    							</div>
+      							<div class="form-group">
+      								<label class="control-label col-sm-2" for="price">Price</label>
+      								<div class="col-sm-10">          
+        								<input type="text" class="form-control" id="price" placeholder="Enter price">
+      								</div>
+    							</div>
+      							<div class="form-group">
+      								<label class="control-label col-sm-2" for="stoppages">Stoppages</label>
+      								<div class="col-sm-10">          
+        								<input type="text" class="form-control" id="stoppages" placeholder="Enter stoppages">
+      								</div>
+    							</div>
+    							<div class="form-group">
+    								<label class="control-label col-sm-2" for="filepicker">Upload image</label>
+    								<div class="col-sm-10">	<input type="file" id="filepicker" accept="image/*">
+								 </div>
+    							</div>
+										<div class="row">
+											<div class="col-sm-2">
+											</div>
+											<div class="col-sm-10">
+												<button type="submit" class="btn btn-primary btn-sm" name="signin">
+													Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+			
+							</div>
+
+			</div>
+		</div>
+	</div>
+		</div>
 		
 		<?php
 		
