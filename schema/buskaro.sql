@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2017 at 05:36 AM
+-- Generation Time: Apr 05, 2017 at 07:42 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -85,16 +85,39 @@ CREATE TABLE `bus_users` (
   `password` varchar(50) NOT NULL,
   `email` varchar(30) NOT NULL,
   `status` varchar(3) NOT NULL,
-  `ukey` varchar(50) NOT NULL
+  `ukey` varchar(50) NOT NULL,
+  `addr` varchar(50) DEFAULT NULL,
+  `phone` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bus_users`
 --
 
-INSERT INTO `bus_users` (`id`, `fname`, `lname`, `password`, `email`, `status`, `ukey`) VALUES
-(1, 'Akash', 'Swain', 'efc559751d100923dd6746f4d733f7cc', 'aakashswain001@gmail.com', 'N', '48ed177e4fdceba1befb81e18180e5fb'),
-(2, 'Akash', 'Swain', '4fe9dfe784a2be25dd8aec3b403c3654', 'sleepygamers2017@gmail.com', 'N', 'ff3e137e56e85766d1c4ec957489cca5');
+INSERT INTO `bus_users` (`id`, `fname`, `lname`, `password`, `email`, `status`, `ukey`, `addr`, `phone`) VALUES
+(1, 'Akash', 'Swain', '03c7c0ace395d80182db07ae2c30f034', 'aakashswain001@gmail.com', 'N', '48ed177e4fdceba1befb81e18180e5fb', 'bhubaneswar', '12345'),
+(2, 'Akash', 'Swain', '4fe9dfe784a2be25dd8aec3b403c3654', 'sleepygamers2017@gmail.com', 'N', 'ff3e137e56e85766d1c4ec957489cca5', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `city`
+--
+
+CREATE TABLE `city` (
+  `id` int(10) NOT NULL,
+  `name` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `city`
+--
+
+INSERT INTO `city` (`id`, `name`) VALUES
+(1, 'Select city'),
+(2, 'bhubaneswar'),
+(3, 'balasore'),
+(4, 'keonjhar');
 
 --
 -- Indexes for dumped tables
@@ -121,6 +144,12 @@ ALTER TABLE `bus_users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexes for table `city`
+--
+ALTER TABLE `city`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -139,6 +168,11 @@ ALTER TABLE `bus_owners`
 --
 ALTER TABLE `bus_users`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `city`
+--
+ALTER TABLE `city`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
