@@ -35,7 +35,7 @@
 								<div class="bootstrap-iso" style="background-color: transparent; z-index: 1000">
 									<div class="container-fluid">
 										<div class="row">
-											<div class="col-md-6 col-md-offset-3 object-non-visible col-sm-12 col-sm-offset-5" data-animation-effect="fadeIn">
+											<div class="col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
 												<h2 class="text-center">
 													<form class="form-horizontal" method="post">
 														<div class="form-group" id="form-group">

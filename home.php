@@ -8,6 +8,21 @@ if ( isset( $_SESSION[ 'user' ] ) == "" ) {
 	header( "Location: index.php" );
 	exit;
 }
+$e = $_SESSION['user'];
+$res = mysql_query( "SELECT addr,phone FROM bus_users WHERE id= $e" );
+		$row = mysql_fetch_array( $res );
+			$count = mysql_num_rows( $res );
+			if ( $count = 1 ) {
+					$a3 = $row['addr'];
+					$a4 = $row['phone'];
+					if( $a3=='' || $a4==''|| $a3== 'NULL' || $a4 == 'NULL'){
+						header( "Location: user_add_data.php" );
+						exit;
+					}
+				} else {
+			echo 'error';
+				}
+
 ?>
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->

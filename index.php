@@ -380,6 +380,7 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 				container: container,
 				todayHighlight: true,
 				autoclose: true,
+				autoclose: 1,
 			} )
 			date_input.datepicker.css( 'zIndex', 999999 );
 		} );

@@ -1,0 +1,98 @@
+.pay-info {
+	border-bottom-style: dotted;
+	border-bottom-color: #EBEBEB;
+	border-bottom-width: 2px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 200px;
+}
+
+.user-info {
+	margin-top: 20px;
+}
+
+.pay-info h3{
+	font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #329aea;
+    font-weight: 500;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.pay-info h5{
+	color: #435964;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.left{
+	float: left;
+    width: 48%;
+}
+
+.right{
+	float: right;
+    width: 48%;
+}
+
+.time{
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.name {
+	width: 100%;
+}
+
+.bus-details {
+	width: 100%;
+}
+
+.seats {
+	width: 100%;
+}
+
+.from-to {
+	width: 100%;
+}
+
+.date {
+	width: 100%;
+}
+
+.total-cost {
+	width: 100%;
+}
+
+.payment-gateway{
+	align-self: center;
+	width: 70%;
+	margin: auto;
+	border: 1px solid #329aea;
+	border-collapse: collapse;
+	border-radius: 5px;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #329aea;
+}
+
+.payment-gateway th{
+	background-color: #329aea;
+	color: white;
+	padding: 5px;
+	border-collapse: collapse;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.payment-gateway td{
+	padding: 5px;
+}
+
+.payment-gateway tr .last{
+	padding:10px;
+}

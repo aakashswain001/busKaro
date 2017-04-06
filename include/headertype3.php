@@ -54,6 +54,7 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="#contact">Contact</a></li>
+												<li><a href="owner_profile.php">Profile</a></li>
 												<li><a href="include/signout.php" >Sign Out</a></li>
 											</ul>
 										</div>
