@@ -243,7 +243,7 @@ p {
         	Reset Password:        	
         </div>
      <form method="post">   <div class="col-sm-8">
-        	<input type="Password" name="changepass">
+        	<input type="Password" required name="changepass">
         </div>
         <br>
         <br>
@@ -251,7 +251,7 @@ p {
         	Confirm Password:        	
         </div>
         <div class="col-sm-8">
-        	<input type="Password" name="confipass">
+        	<input type="Password" required name="confipass">
         </div>
       </div>
       <br>

@@ -22,6 +22,7 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 				} else {
 			echo 'error';
 				}
+
 ?>
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -107,6 +108,16 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 				$a4 = $row1[ 4 ];
 				$a5 = $row1[ 5 ];
 				$a6 = $row1[ 6 ];
+				$res = mysql_query( "SELECT name FROM city WHERE id='$a2'" );
+			$row = mysql_fetch_array( $res );
+			$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
+			$a2 = $row['name'];	
+
+$res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
+			$row = mysql_fetch_array( $res );
+			$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
+			$a3 = $row['name'];
+
 				if ($a6 == "y"){$a7 = "Accepted";}else{$a7= "Acceptance Pending";}
 				echo '<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
@@ -166,14 +177,37 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="From">From:</label>
 										<div class="col-sm-10">
-											<input type="text" class="form-control" name="from" id="from" placeholder="Enter starting point">
+					
+											<select name="from" class="inputText" placeholder="Source city"/>
+									<?php
+									//include( 'db.php' );
+									$result = mysql_query( "SELECT id,name FROM city" );
+									while ( $row = mysql_fetch_array( $result ) ) {
+										echo '<option value="' . $row[ 'id' ] . '">';
+										echo $row[ 'name' ];
+										echo '</option>';
+									}
+									?>
+									</select>
+
+
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="to">To:</label>
 										<div class="col-sm-10">
-											<input type="text" class="form-control" name="to" id="to" placeholder="Enter destination">
-										</div>
+											
+											<select name="to" class="inputText" placeholder="Source city"/>
+									<?php
+									//include( 'db.php' );
+									$result = mysql_query( "SELECT id,name FROM city" );
+									while ( $row = mysql_fetch_array( $result ) ) {
+										echo '<option value="' . $row[ 'id' ] . '">';
+										echo $row[ 'name' ];
+										echo '</option>';
+									}
+									?>
+									</select>				</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Price</label>

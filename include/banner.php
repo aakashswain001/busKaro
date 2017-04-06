@@ -5,13 +5,25 @@
 			<div class="banner-caption" style="margin-top: 0px">
 				<div class="container" id="banner-caption-container" style="margin-top: 0px">
 					<div class="row" style="margin-top: 0px">
+					<form method="get" action="search_bus.php">
 						<div class="col-md-6 col-md-offset-3 object-non-visible" style="margin-top: 0px" data-animation-effect="fadeIn">
 							<h2 class="text-center">Search <span>Buses</span></h2>
 							<div class="space"></div>
 							<div class="lead text-center">
 								<div class="row upperinput">
 									<div class="col-md-3 col-md-offset-1" style="justify-content: right">
-										<input type="text" id="sourceCityId" class="inputText" placeholder="Source City">
+												<select name="frommm" class="inputText" placeholder="Source city"/>
+									<?php
+									//include( 'db.php' );
+									$result = mysql_query( "SELECT id,name FROM city" );
+									while ( $row = mysql_fetch_array( $result ) ) {
+										echo '<option value="' . $row[ 'id' ] . '">';
+										echo $row[ 'name' ];
+										echo '</option>';
+									}
+									?>
+									</select>
+
 									</div>
 									<div class="col-md-3 col-md-offset-2" style="justify-content: left">
 										<select class="selectText" id="sourceSelect">
@@ -22,8 +34,18 @@
 								</div>
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1" style="justify-content: right">
-										<input type="text" id="destinationCityId" class="inputText" placeholder="Destination City">
-									</div>
+											<select name="tooo" class="inputText" placeholder="Source city"/>
+									<?php
+									//include( 'db.php' );
+									$result = mysql_query( "SELECT id,name FROM city" );
+									while ( $row = mysql_fetch_array( $result ) ) {
+										echo '<option value="' . $row[ 'id' ] . '">';
+										echo $row[ 'name' ];
+										echo '</option>';
+									}
+									?>
+									</select>
+</div>
 									<div class="col-md-3 col-md-offset-2" style="justify-content: left">
 										<select class="selectText" id="destinationSelect">
 											<option value="1">Destination State</option>
@@ -61,7 +83,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+					</form>	</div>
 					</div>
 				</div>
 			</div>

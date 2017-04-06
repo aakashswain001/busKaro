@@ -107,15 +107,15 @@ WHERE id = $ex";
 							<input type="text" placeholder="Adhar Number" class="registerText" id="adharnumber" name="adhar">
 						</div>
 						<div class="row">
-							<input type="text" name="addr" placeholder="Address" class="registerText" id="address">
+							<input type="text" required name="addr" placeholder="Address" class="registerText" id="address">
 						</div>
 
 
 						<div class="row">
-							<input type="text" name="phone" placeholder="Mobile Number" class="registerText" id="mobile">
+							<input type="text" required name="phone" placeholder="Mobile Number" class="registerText" id="mobile">
 						</div>
 						<div class="row">
-							<input type="text" name="servicename" placeholder="Bus Service Name" class="registerText" id="busname">
+							<input type="text" required name="servicename" placeholder="Bus Service Name" class="registerText" id="busname">
 						</div>
 
 						<div class="row" style=" margin-left:250px margin-top:250px;">
