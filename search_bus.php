@@ -169,6 +169,7 @@ include 'include/headertype2.php';
 <div class="panel panel-default" id="mypanelhead">
 	<div class="panel-heading" id="mypan">
 		<table class="table table-striped" id="mytable">
+		<form method="get" action="book_bus_user.php">
 		<?php
 		$sql = "SELECT id,busname,price,locn FROM bus_details WHERE  tooo='$t' AND frommm='$fro'";
 		if ( $result = mysqli_query( $con1, $sql ) ) {
@@ -186,8 +187,9 @@ echo '<tr style="height: 100px;">
 				<td>'.$frommm.'<br><br>from</td>
 				<td>'.$tooo.'<br><br>To</td>
 				<td>Rs. '.$a2.'<br><br>Price</td>
-				<td>52 seats<br><br>5 available</td>
-				<td><button class="btn btn-danger">Book Seats</button></td>
+				<td>30 seats<br><br>5 available</td>
+				<input type= "hidden" value = "'.$a1.'" name = "frommm"> 
+				<td><button type = "submit" name = "book" class="btn btn-danger">Book Seats</button></td>
 			</tr>';
 }
 			// Free result set
@@ -199,7 +201,7 @@ echo '<tr style="height: 200px;">
 			</tr>';
 
 		}
-		?>
+		?></form>
 		</table>
 	</div>
 </div>
