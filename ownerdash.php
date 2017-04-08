@@ -122,13 +122,13 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 
 				if ($a6 == "y"){$a7 = "Accepted";}else{$a7= "Acceptance Pending";}
 				echo '<div class="row">
-			<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-primary1">
 					<div class="panel-heading">BusName<a href="#" data-toggle="modal" data-target="#myModal"></a>
 					</div>
 					<div class="media">
 						<div class="media-left media-top">
-							<img class="media-object" src='.$a5.' alt="..." style="margin-left: 10px">
+							<img class="media-object" src='.$a5.' alt="..." height="50%" width="60%" style="margin-left: 10px;">
 						</div>
 						<div class="media-body">
 						Name: '.$a1.'<br>
