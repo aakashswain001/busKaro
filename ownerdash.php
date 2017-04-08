@@ -91,7 +91,7 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 		<div class="panel panel-default1">
 			<div class="panel-heading">
 				<div class="text-center">
-					<button type="button" class="btn btn-warning btn-round"><i class="fa fa-bus fa-3x" id="thisbtn" data-toggle="modal" data-target="#myModal3"></i></button>
+					<button type="button" class="btn btn-warning btn-round" id="thisbtn" data-toggle="modal" data-target="#myModal3"><i class="fa fa-bus fa-3x" ></i></button>
 				</div>
 			</div>
 		</div>
