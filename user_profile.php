@@ -140,7 +140,7 @@ p {
 		<!-- ================ -->
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
 
-<?php include 'include/headertype4.php'; ?>
+<?php include 'include/headertype5.php'; ?>
 
 		<center>
   <div class="box" style="margin-top: 200px;">

@@ -98,7 +98,7 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 		<?php
 		
 		$ex = $_SESSION[ 'user' ];
-		$sql = "SELECT id,busname,frommm,tooo,price,locn,status FROM bus_details WHERE owner_id='$ex'";
+		$sql = "SELECT id,busname,frommm,tooo,price,locn,status,dep,arr FROM bus_details WHERE owner_id='$ex'";
 		if ( $result = mysqli_query( $con1, $sql ) ) {
 			// Fetch one and one row
 			while ( $row1 = mysqli_fetch_row( $result ) ) {
@@ -108,6 +108,8 @@ $res = mysql_query( "SELECT servicename,adhar,addr,phone FROM bus_owners WHERE i
 				$a4 = $row1[ 4 ];
 				$a5 = $row1[ 5 ];
 				$a6 = $row1[ 6 ];
+				$a9= $row1[7];
+				$a8 = $row1[8];
 				$res = mysql_query( "SELECT name FROM city WHERE id='$a2'" );
 			$row = mysql_fetch_array( $res );
 			$count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
@@ -130,7 +132,7 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 						</div>
 						<div class="media-body">
 						Name: '.$a1.'<br>
-							From:' .$a2.' <br> To: '.$a3.' <br>Cost: Rs '.$a4.'<br>status: '.$a7.'<br>
+							From:' .$a2.' <br>Departure Time:' .$a9.' <br> To: '.$a3.'<br>Arrival Time:' .$a8.' <br> <br>Cost: Rs '.$a4.'<br>status: '.$a7.'<br>
 						</div>
 					</div>
 				</div>
@@ -213,6 +215,20 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 										<label class="control-label col-sm-2" for="price">Price</label>
 										<div class="col-sm-10">
 											<input type="text" class="form-control" name="price" id="price" placeholder="Enter price">
+										</div>
+									</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="price">Departure Time</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="dep" id="dep" placeholder="Departure Time">
+										</div>
+									</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="price">Arrival</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="arr" id="arr" placeholder="Arrival Time">
 										</div>
 									</div>
 									<div class="form-group">

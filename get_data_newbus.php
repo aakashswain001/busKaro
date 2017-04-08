@@ -49,9 +49,11 @@ $busname = $_POST['busname'];
 $from = $_POST['from'];
 $to = $_POST['to'];
 $price = $_POST['price'];
+$dep = $_POST['dep'];
+$arr = $_POST['arr'];
 echo $busname;
 $own_id=$_SESSION['user'];
-   $query = "INSERT INTO bus_details(owner_id,busname,frommm,tooo,price,locn,status) VALUES($own_id,'$busname','$from','$to','$price','$target_file','n')";
+   $query = "INSERT INTO bus_details(owner_id,busname,frommm,tooo,price,locn,status,dep,arr) VALUES($own_id,'$busname','$from','$to','$price','$target_file','n','$dep','$arr')";
    $res = mysql_query($query);
     
    if ($res) {
