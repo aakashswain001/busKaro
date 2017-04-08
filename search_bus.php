@@ -153,7 +153,7 @@ include 'include/headertype2.php';
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<input type="text" placeholder="Journey Date" name="date" id="OnwardDate" class="form-control">
+									<input type="date" placeholder="Journey Date" name="date" id="OnwardDate" class="form-control">
 								</div>
 							</div>
 							<div class="col-md-2">
