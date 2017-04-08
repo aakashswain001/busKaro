@@ -4,11 +4,10 @@ $bus_date = $_POST[ 'date' ];
 
 $fro = $_POST[ "from" ];
 $t = $_POST[ "to" ];
-$res = mysql_query( "SELECT name FROM city WHERE id='$fro'" );
+$res = mysql_query( "SELECT id,name FROM city WHERE id='$fro'" );
 $row = mysql_fetch_array( $res );
 $count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
 $frommm = $row[ 'name' ];
-
 $res = mysql_query( "SELECT name FROM city WHERE id='$t'" );
 $row = mysql_fetch_array( $res );
 $count = mysql_num_rows( $res ); // if uname/pass correct it returns must be 1 row
@@ -20,6 +19,7 @@ if ( $result = mysqli_query( $con1, $sql ) ) {
 	while ( $row1 = mysqli_fetch_row( $result ) ) {
 		$a0 = $row1[ 0 ];
 		if ( isset( $_POST[ 'book' . $a0 ] ) ) {
+			$bus_id = $row1[0];
 			$a1 = $row1[ 1 ];
 			$a2 = $row1[ 2 ];
 			$a3 = $row1[ 3 ];
@@ -595,7 +595,7 @@ if ( $result = mysqli_query( $con1, $sql ) ) {
 						</div>
 					</div>
 				</div>
-
+<input type="hidden" name="bus_id" value=<?=$bus_id ?>>
 				<input type="hidden" name="dep" value=<?=$dep ?>>
 				<input type="hidden" name="arr" value=<?=$arr ?>>
 				<input type="hidden" name="busname" value=<?=$a1 ?>>

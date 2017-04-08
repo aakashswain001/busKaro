@@ -1,6 +1,7 @@
 <?php
 include_once 'dbconnect.php';
 session_start();
+$bus_id = $_POST[ 'bus_id' ];
 $bus_name = $_POST[ 'busname' ];
 $date = $_POST[ 'date' ];
 $from = $_POST[ 'from' ];
@@ -19,6 +20,15 @@ if ( $count = 1 ) {
 }
 
 $seat_count = 0;
+for ( $i = 0; $i < 10; $i++ ) {
+	$_SESSION[ $i . 'A' ] = "";
+	$_SESSION[ $i . 'B' ] = "";
+	$_SESSION[ $i . 'C' ] = "";
+	$_SESSION[ $i . 'D' ] = "";
+	$_SESSION[ $i . 'E' ] = "";
+	$_SESSION[ $i . 'F' ] = "";
+}
+
 for ( $i = 1; $i <= 10; $i++ ) {
 	if ( $_POST[ $i . 'A' ] == "on" ) {
 		$_SESSION[ $i . 'A' ] = "on";
@@ -176,12 +186,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 											<div class="clear"></div>
 										</div>
-										<input type="hidden" name="busname" value=<?=$ bus_name?>>
-										<input type="hidden" name="date" value=<?=$ date?>>
-										<input type="hidden" name="from" value=<?=$ from?>>
-										<input type="hidden" name="to" value=<?=$ to?>>
-										<input type="hidden" name="arr" value=<?=$ arr?>>
-										<input type="hidden" name="dep" value=<?=$ dep?>>
+										<input type="hidden" name="busname" value=<?=$bus_name?>>
+										<input type="hidden" name="date" value=<?=$date?>>
+										<input type="hidden" name="price" value=<?=$price?>>
+										<input type="hidden" name="bus_id" value=<?=$bus_id?>>
+										<input type="hidden" name="from" value=<?=$from?>>
+										<input type="hidden" name="to" value=<?=$to?>>
+										<input type="hidden" name="arr" value=<?=$arr?>>
+										<input type="hidden" name="dep" value=<?=$dep?>>
 										<input type="submit" value="SUBMIT">
 
 									</form>
@@ -290,13 +302,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="clear"></div>
 									</div>
 									<form method="post" action="dummy_payment.php">
-										<input type="hidden" name="busname" value=<?=$ bus_name?>>
-										<input type="hidden" name="date" value=<?=$ date?>>
-										<input type="hidden" name="from" value=<?=$ from?>>
-										<input type="hidden" name="to" value=<?=$ to?>>
-										<input type="hidden" name="arr" value=<?=$ arr?>>
-										<input type="hidden" name="dep" value=<?=$ dep?>>
-
+										<input type="hidden" name="busname" value=<?=$bus_name?>>
+										<input type="hidden" name="date" value=<?=$date?>>
+										<input type="hidden" name="from" value=<?=$from?>>
+										<input type="hidden" name="bus_id" value=<?=$bus_id?>>
+										<input type="hidden" name="to" value=<?=$to?>>
+										<input type="hidden" name="arr" value=<?=$arr?>>
+										<input type="hidden" name="dep" value=<?=$dep?>>
+										<input type="hidden" name="price" value=<?=$price?>>
 										<input type="submit" value="continue" name="submit">
 									</form>
 
