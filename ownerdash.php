@@ -124,7 +124,7 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 				echo '<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-primary1">
-					<div class="panel-heading">BusName<a href="#" data-toggle="modal" data-target="#myModal"></a>
+					<div class="panel-heading">BusName
 					</div>
 					<div class="media">
 						<div class="media-left media-top">
@@ -266,34 +266,38 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 
 		<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
-		<!-- Jquery and Bootstap core js files -->
-		<script type="text/javascript" src="plugins/jquery.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- Jquery and Bootstap core js files -->
+	<script type="text/javascript" src="plugins/jquery.min.js"></script>
+	<!-- Backstretch javascript -->
+	<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+	
+	<!-- Appear javascript -->
+	<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+	
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-		<!-- Modernizr javascript -->
-		<script type="text/javascript" src="plugins/modernizr.js"></script>
+	<!-- Modernizr javascript -->
+	<script type="text/javascript" src="plugins/modernizr.js"></script>
 
-		<!-- Isotope javascript -->
-		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+	<!-- Isotope javascript -->
+	<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
 
-		<!-- Backstretch javascript -->
-		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+	
 
-		<!-- Appear javascript -->
-		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+	
+	<!-- Initialization of Plugins -->
+	<script type="text/javascript" src="js/template.js"></script>
 
-		<!-- Initialization of Plugins -->
-		<script type="text/javascript" src="js/template.js"></script>
+	<!-- Custom Scripts -->
+	<script type="text/javascript" src="js/custom.js"></script>
 
-		<!-- Custom Scripts -->
-		<script type="text/javascript" src="js/custom.js"></script>
-
-		<script src="js/responsive-calendar.js" type="text/javascript"></script>
+	<script src="js/responsive-calendar.js" type="text/javascript"></script>
 
 
-		<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
-		<!-- Include jQuery -->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+	<!-- Include jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 
 
 
