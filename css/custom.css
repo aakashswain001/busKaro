@@ -160,3 +160,13 @@ File Description: Place here your custom CSS styles
 #mypan a::after{
 	content: "";
 }
+	.myinputText {
+    width: 200px;
+    height: 45px;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 5px;
+    padding-left: 10px;
+}

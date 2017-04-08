@@ -168,7 +168,7 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 					<div class="modal-body">
 						<div class="row">
 							<div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px; padding-bottom: 20px">
-								<!-- Nav tabs -->
+								<!-- Nav tabs -->	
 								<form class="form-horizontal" method="post" action="get_data_newbus.php" enctype="multipart/form-data">
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="busname">BusName</label>
@@ -180,7 +180,7 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 										<label class="control-label col-sm-2" for="From">From:</label>
 										<div class="col-sm-10">
 					
-											<select name="from" class="inputText" placeholder="Source city"/>
+											<select name="from" class="myinputText" placeholder="Source city"/>
 									<?php
 									//include( 'db.php' );
 									$result = mysql_query( "SELECT id,name FROM city" );
@@ -199,7 +199,7 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 										<label class="control-label col-sm-2" for="to">To:</label>
 										<div class="col-sm-10">
 											
-											<select name="to" class="inputText" placeholder="Source city"/>
+											<select name="to" class="myinputText" placeholder="Source city"/>
 									<?php
 									//include( 'db.php' );
 									$result = mysql_query( "SELECT id,name FROM city" );
@@ -217,14 +217,13 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 											<input type="text" class="form-control" name="price" id="price" placeholder="Enter price">
 										</div>
 									</div>
-									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Departure Time</label>
 										<div class="col-sm-10">
 											<input type="text" class="form-control" name="dep" id="dep" placeholder="Departure Time">
 										</div>
 									</div>
-									</div>
+									
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Arrival</label>
 										<div class="col-sm-10">
