@@ -83,7 +83,9 @@ WHERE id = $ex";
 		<link href="css/myStyles.css" rel="stylesheet">
 
 <style>
-  html{height:100%;}
+  html{
+	  height:100%;
+	}
 
  
 
@@ -127,6 +129,44 @@ p {
 	border-radius: 25px;
 
 }
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	#lastcol{
+		display: none;
+	}
+	
+}
+	
+	
 </style>
 
 		<script>
@@ -159,13 +199,13 @@ p {
           <br>
             
             <div class="panel-body" >
-              <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center">  </div>
+              
+               <!-- <div class="col-md-2 col-lg-2 col-xs-12 ">  </div>-->
                 
          
-                <div class=" col-md-9 col-lg-9 " > 
+                <div class=" col-md-12 col-lg-12 col-xs-12" > 
                 
-                  <table class="table table-user-information" >
+                  <table class="table" >
                     <tbody>
                     
                       <tr>
@@ -174,15 +214,15 @@ p {
                         </tr>
                        <tr>
                         <td>Email Id: </td>
-                        <td><?= $a2;?></td>
-                        
+                        <td><?= $a2;?></td>  
                       </tr>
+                       <tr>
                         <td>Phone Number:</td>
                         <td><?= $a4;?></td>
-                        </tr>
-                        </tr>
+                       </tr>
                         <tr>
                         	<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btm">Change Password</button></td>
+                        	<td id="lastcol"></td>
                         </tr>
                      
                      
@@ -190,7 +230,7 @@ p {
                   </table>
                   
                   </div>
-              </div>
+              
             </div>
             </div>
             </div>
@@ -229,7 +269,7 @@ p {
       <br>
       <br>
       <div class="modal-footer">
-       <input type="submit" value="updade" class="btn btn-info btn-round" id="registerButtonService" name="update">
+       <input type="submit" value="update" class="btn btn-info btn-round" id="registerButtonService" name="update">
         <button type="button" class="btn btn-danger" data-dismiss="modal" id="btm">Close</button>
 </form> 
       </div>
