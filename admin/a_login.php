@@ -1,3 +1,19 @@
+<?php
+
+// it will never let you open index(login) page if session is set
+if ( isset( $_GET[ 'admin' ] ) != "" ) {
+	
+	$name =$_GET['name'];
+$pass = $_GET['pass'];
+if(($name=="admin")&&($pass=="pass")){
+	header("Location: details.html");
+	exit();
+}else{
+	echo '<script type ="text/javascript">alert("error");</script>';
+}
+}
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -16,29 +32,26 @@
 <div class="container" style="padding-top: 10px;">
 <div class="row">
 	<div class="col-md-8">
-	<form class="form-horizontal" role="form" action="details.html">
+	<form class="form-horizontal" role="form">
 		<div class="form-group" >
 			<label for="from" class="control-label col-sm-2">Name :</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="text" id="from" name="from" class="form-control"> 
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="To" class="control-label col-sm-2">Email:</label>
-			<div class="col-sm-3 col-lg-6">
-				<input type="email" id="to" name="to" class="form-control" >
+				<input type="text" id="from" name="name" class="form-control"> 
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="d_on" class="control-label col-sm-2">Password:</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="password" id="d_on" name="d_on" class="form-control">
+				<input type="password" id="d_on" name="pass" class="form-control">
 		</div>
 			</div>
 
+	<div class="col-md-8 col-lg-8" style="float: right;">
+		<input type="submit" name = "admin">
+		
 		</form>
 	</div>
-	<div class="col-md-8 col-lg-8" style="float: right;"><a href="details.html" class="btn btn-success">Submit</a></div>
+	</div>
    </div>
 	</div>
 </body>

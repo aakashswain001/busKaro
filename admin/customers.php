@@ -1,3 +1,7 @@
+<?php
+include_once '../dbconnect.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,42 +46,26 @@ tr:nth-child(even) {
     <th>Email-id</th>
     <th>Delete Option</th>
   </tr>
-  <tr>
-    <td>Akash</td>
-    <td>Swain</td>
-    <td>abc@gmail.com</td>
+  <?php
+$sql = "SELECT id,fname,lname,email FROM bus_users";
+		if ( $result = mysqli_query( $con1, $sql ) ) {
+			// Fetch one and one row
+			while ( $row1 = mysqli_fetch_row( $result ) ) {
+				echo '<tr>
+    <td>'.$row1[1].'</td>
+    <td>'.$row1[2].'</td>
+    <td>'.$row1[3].'</td>
     <td> <button type="button" class="btn btn-danger">Delete</button></td>
   </tr>
-  <tr>
-    <td>Asish</td>
-    <td>Boity</td>
-    <td>abc@gmail.com</td>
-    <td> <button type="button" class="btn btn-danger">Delete</button></td>
-  </tr>
-  <tr>
-    <td>Tulsi</td>
-    <td>Acharya</td>
-    <td>abc@gmail.com</td>
-    <td> <button type="button" class="btn btn-danger">Delete</button></td>
-  </tr>
-  <tr>
-    <td>Shimona</td>
-    <td>Elora</td>
-    <td>abc@gmail.com</td>
-    <td> <button type="button" class="btn btn-danger">Delete</button></td>
-  </tr>
-  <tr>
-    <td>sourav</td>
-    <td>Mohanty</td>
-    <td>abc@gmail.com</td>
-    <td> <button type="button" class="btn btn-danger">Delete</button></td>
-  </tr>
-  <tr>
-    <td>Priyabrat</td>
-    <td>Pradhan</td>
-    <td>abc@gmail.com</td>
-    <td> <button type="button" class="btn btn-danger">Delete</button></td>
-  </tr>
+  ';
+			}	// Free result set
+			mysqli_free_result( $result );
+		}
+		
+	?>
+  
+  
+  
 </table>
 
 </body>
