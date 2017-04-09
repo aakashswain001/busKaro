@@ -322,7 +322,7 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 											
 
 
-												<a href="javascript:;">Forgot your password?</a>
+												<a href="forgetpass.php">Forgot your password?</a>
 											</div>
 										</div>
 									</form>

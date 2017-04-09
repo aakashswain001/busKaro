@@ -1,5 +1,3 @@
-
-?>
 <!doctype html>
 <html>
 <head>
@@ -7,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="file:///C|/Users/lenovo/Documents/GitHub/busKaro/website/styleb1.css">
+  <link rel="stylesheet" type="text/css" href="website/styleb1.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Admin register</title>
@@ -18,24 +16,19 @@
 <div class="container" style="padding-top: 10px;">
 <div class="row">
 	<div class="col-md-8">
-	<form class="form-horizontal" method="post" role="form">
-		<div class="form-group" >
-			<label for="from" class="control-label col-sm-2">Username :</label>
+	<form class="form-horizontal" role="form">
+	   <h1 style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'; margin-left: 120px;color: #399097; font-weight:500; padding-bottom: 30px;">FORGET PASSWORD </h1>
+	
+		<div class="form-group">
+			<label for="To" class="control-label col-sm-2">Email:</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="text" id="from" name="from" class="form-control"> 
+				<input type="email" id="email" name="email" class="form-control" >
 			</div>
 		</div>
 		
-		<div class="form-group">
-			<label for="d_on" class="control-label col-sm-2">Password:</label>
-			<div class="col-sm-3 col-lg-6">
-				<input type="password" id="d_on" name="d_on" class="form-control">
-		</div>
-	<input type="submit" name="user"> 		</div>
-
+     <input type="submit" class="btn-success" value="Submit" style="margin-left: 200px;">
 		</form>
 	</div>
-	
    </div>
 	</div>
 </body>

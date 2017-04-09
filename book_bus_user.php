@@ -30,6 +30,7 @@ if ( $result = mysqli_query( $con1, $sql ) ) {
 	// Free result set
 	mysqli_free_result( $result );
 }
+ $id2 = $bus_id;
 ?>
 <!DOCTYPE html>
 <html>
@@ -574,9 +575,7 @@ if ( $result = mysqli_query( $con1, $sql ) ) {
 									</li>
 								</ol>
 								<?php
-
-
-								$sql = "SELECT id,seat_no from tickets WHERE  date='$bus_date' AND bus_id='$a0'";
+								$sql = "SELECT id,seat_no from tickets WHERE date='$bus_date' AND bus_id='$id2'";
 								if ( $result = mysqli_query( $con1, $sql ) ) {
 									while ( $row1 = mysqli_fetch_row( $result ) ) {
 										$b0 = $row1[ 0 ];
