@@ -137,7 +137,7 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<form role="form" id="footer-form">
+								<form role="form" id="footer-form"  action="query_send_mail.php">
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="name2">Name</label>
 										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
