@@ -16,7 +16,7 @@
 <div class="container" style="padding-top: 10px;">
 <div class="row">
 	<div class="col-md-8">
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="forgetpass_send_mail.php">
 	   <h1 style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'; margin-left: 120px;color: #399097; font-weight:500; padding-bottom: 30px;">FORGET PASSWORD </h1>
 	
 		<div class="form-group">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		
-     <input type="submit" class="btn-success" value="Submit" style="margin-left: 200px;">
+     <input type="submit" class="btn-success" value="Submit" name="ok" style="margin-left: 200px;">
 		</form>
 	</div>
    </div>
