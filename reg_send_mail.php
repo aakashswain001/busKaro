@@ -12,85 +12,60 @@ $full_name = strip_tags( $_GET[ 'fullname' ] );
 $confirmation_link = strip_tags( $_GET[ 'clink' ] );
 $email = strip_tags( $_GET[ 'email' ] );
 $subject = "Confirm BusKaro Registration";
+$text_message = "Hello $full_name, <br /><br /> This is confirmation mail from BusKaro. We are here to make ur transport a lot easier";
+$text_message2 = "Click <a href = " . $confirmation_link . ">Here</a>to complete the registration ";
+// HTML email starts here
+
 
 // HTML email ends here
-$message = '<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Confirmation</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="file:///C|/Users/lenovo/Documents/GitHub/busKaro/website/styleb1.css">
-  <link rel="stylesheet" type="text/css" href="custom.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-	  #sec{
+$message = "<html><body>";
 
-		  max-height: 303px;
-	  }
-	  
-	  container{
-		  max-height: 900px; !important;
-	  }
-	  #desc{
-		  font-size: 30px;
-		  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-		  color:#4288D3;
-	  }
-	  span{font-size: 30px;
-		  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-		  color: #3879BD;
-		  
-	  }
-	  h2{
-		  background-color:#4288D3;
-		  height: 80px;
-		  font-size-adjust: auto;
-		  font-weight:500px;
-	  }
-	  #d{
-		  max-height: 60px;
-	  }
+$message .= "<table width='100%' bgcolor='#e0e0e0' cellpadding='0' cellspacing='0' border='0'>";
 
+$message .= "<tr><td>";
 
-	</style>
+$message .= "<table align='center' width='100%' border='0' cellpadding='0' cellspacing='0' style='max-width:650px; background-color:#fff; font-family:Verdana, Geneva, sans-serif;'>";
 
-</head>
+$message .= "<thead>
+            <tr height='80'>
+              <th colspan='4' style='background-color:#f5f5f5; border-bottom:solid 1px #bdbdbd; font-family:Verdana, Geneva, sans-serif; color:#333; font-size:34px;' >Bus Karo</th>
+            </tr>
+            </thead>";
 
-<body>
-<section id="sec">
-<div class="container" >
-<div class="qlt-confirmation">
-  	<div class="panel panel-default">
-      <div class="panel-body">
-        
-        <h2 style="text-align: center; padding-top: 20px;">BusKaro</h2>
-        <center>
-        <img src="http://www.iconfinder.com/icons/642206/download/png//128" style="width:70px; height: 70px;">
-         <h3>Hi,<span style="color: #5F5959;">'.$full_name.'</span></h3>
-          <p id="desc" style=" font-size: 30px;
-		  color: #3879BD;">Thank You For Registration <img src="http://www.iconfinder.com/icons/1715767/download/png/48" width="66" height="58" style="width:60px; margin-top:10px;"></p><br><span style=" font-size: 30px;
-		  color: #3879BD;">We assure you to provide the best service in town.<img src="http://www.iconfinder.com/icons/1880589/download/png/64" style="width:60px; height: 60px;"></span><br><br><br>
-			<p>Please click on this <a href='.$confirmation_link.'>link.</a><img src="http://www.iconfinder.com/icons/1814103/download/png/64" style="width:60px; height: 60px;"></p>
-
-         <label id="d">
-              Find Us On : 
-              <a href="https://www.facebook.com/akash.ranjan.96742" target="_blank"><img style="vertical-align:middle" src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-facebook-m.png" /></a>
-              <a href="https://twitter.com/aakashswain001" target="_blank"><img style="vertical-align:middle" src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-twitter-m.png" /></a>
-              <a href="https://plus.google.com/u/0/+AkashSwain001" target="_blank"><img style="vertical-align:middle" src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-googleplus-m.png" /></a>
+$message .= "<tbody>
+          
+              <tr>
+              <td colspan='4' style='padding:15px;'>
+                <p style='font-size:20px;'>Hi' " . $full_name . ",</p>
+                <hr />
+                <p style='font-size:25px;'>Registration confirmation Email from BusKaro</p>
+                <p style='font-size:15px; font-family:Verdana, Geneva, sans-serif;'>" . $text_message . ".</p>
+                <br>
+                <p style='font-size:15px; font-family:Verdana, Geneva, sans-serif;'>" . $text_message2 . ".</p>
+                <br>
+            </tr>
+            
+            <tr height='80'>
+              <td colspan='4' align='center' style='background-color:#f5f5f5; border-top:dashed #00a2d1 2px; font-size:24px; '>
+              <label>
+              Find Me On : 
+              <a href='https://www.facebook.com/akash.ranjan.96742' target='_blank'><img style='vertical-align:middle' src='https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-facebook-m.png' /></a>
+              <a href='https://twitter.com/aakashswain001' target='_blank'><img style='vertical-align:middle' src='https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-twitter-m.png' /></a>
+              <a href='https://plus.google.com/u/0/+AkashSwain001' target='_blank'><img style='vertical-align:middle' src='https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-googleplus-m.png' /></a>
               
-            </label>
-		  </center>
-      </div>
-	</div>
-</div>
-	</div>
-	</section>
-</body>
-</html>';
+              </label>
+              </td>
+            </tr>
+            
+            </tbody>";
+
+$message .= "</table>";
+
+$message .= "</td></tr>";
+$message .= "</table>";
+
+$message .= "</body></html>";
+
 // HTML email ends here
 
 try {
@@ -103,7 +78,7 @@ try {
 	$mail->Port = 465;
 	$mail->AddAddress( $email );
 	$mail->Username = "aakashswain001@gmail.com";
-	$mail->Password = "sang@1234";
+	$mail->Password = "sang1234";
 	$mail->SetFrom( 'aakashswain001@gmail.com', 'BusKaro' );
 	$mail->AddReplyTo( "aakashswain001@gmail.com", "BusKaro" );
 	$mail->Subject = $subject;
