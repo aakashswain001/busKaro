@@ -78,7 +78,17 @@
 								<div class="row">
 									<div class="col-md-6 col-md-offset-3">
 										<h2 class="text-center">
-											<input type="submit" value="search" class="button" style="z-index: 450; margin-bottom: 270px;">
+										<?php
+											if($_SESSION['user']==""){
+											echo	'<input type="button" onClick="myf()"value="search" class="button" style="z-index: 450; margin-bottom: 270px;">';
+												echo '<script type="text/javascript">
+												function myf(){
+												alert("Login to continue ");}</script>';
+							
+											}else{
+											echo	'<input type="submit" value="search" class="button" style="z-index: 450; margin-bottom: 270px;">';
+											}
+											?>
 										</h2>
 									</div>
 								</div>
