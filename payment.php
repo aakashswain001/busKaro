@@ -160,10 +160,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="payment-info">
 									<h3 class="pay-title">Credit Card Info</h3>
-									<form action="dummy_payment.php" method="post">
+									<form action="dummy_payment" method="post">
 										<div class="tab-for">
 											<h5>NAME ON CARD</h5>
-											<input type="text" required value="">
+											<input type="text" value="">
 											<h5>CARD NUMBER</h5>
 											<input class="pay-logo" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required="">
 										</div>
@@ -172,10 +172,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<h5>EXPIRATION</h5>
 												<ul>
 													<li>
-														<input type="number" required class="text_box" type="text" value="6" min="1"/>
+														<input type="number" class="text_box" type="text" value="6" min="1"/>
 													</li>
 													<li>
-														<input type="number" required class="text_box" type="text" value="1988" min="1"/>
+														<input type="number" class="text_box" type="text" value="1988" min="1"/>
 													</li>
 
 												</ul>
@@ -301,7 +301,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="clear"></div>
 									</div>
-									<form method="post" action="dummy_payment.php">
+									<form method="post" action="dummy_payment">
 										<input type="hidden" name="busname" value=<?=$bus_name?>>
 										<input type="hidden" name="date" value=<?=$date?>>
 										<input type="hidden" name="from" value=<?=$from?>>
@@ -347,7 +347,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="user-login">
 											<h2>Login</h2>
 
-											<form action="dummy_payment.php">
+											<form action="dummy_payment">
 												<input type="text" value="name@email.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'name@email.com';}" required="">
 												<input type="password" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}" required="">
 												<div class="user-grids">
@@ -405,7 +405,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="payment-info">
 
 									<h3 class="pay-title">Dedit Card Info</h3>
-									<form method="get" action="dummy_payment.php">
+									<form method="get" action="dummy_payment">
 										<div class="tab-for">
 											<h5>NAME ON CARD</h5>
 											<input type="text" value="">
@@ -434,7 +434,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<input type="submit" value="SUBMIT" onclick="redirect()">
 										<script type="text/javascript">
 											function redirect() {
-												$( 'form' ).attr( 'action', 'dummy_payment.php' );
+												$( 'form' ).attr( 'action', 'dummy_payment' );
 											};
 										</script>
 									</form>

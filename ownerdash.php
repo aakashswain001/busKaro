@@ -214,20 +214,20 @@ $res = mysql_query( "SELECT name FROM city WHERE id='$a3'" );
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Price</label>
 										<div class="col-sm-10">
-											<input type="text" required class="form-control" name="price" id="price" placeholder="Enter price">
+											<input type="text" class="form-control" name="price" id="price" placeholder="Enter price">
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Departure Time</label>
 										<div class="col-sm-10">
-											<input type="text" required class="form-control" name="dep" id="dep" placeholder="Departure Time">
+											<input type="text" class="form-control" name="dep" id="dep" placeholder="Departure Time">
 										</div>
 									</div>
 									
 									<div class="form-group">
 										<label class="control-label col-sm-2" for="price">Arrival</label>
 										<div class="col-sm-10">
-											<input type="text" required class="form-control" name="arr" id="arr" placeholder="Arrival Time">
+											<input type="text" class="form-control" name="arr" id="arr" placeholder="Arrival Time">
 										</div>
 									</div>
 									<div class="form-group">

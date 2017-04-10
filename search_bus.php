@@ -153,7 +153,7 @@ include 'include/headertype2.php';
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<input type="date" required placeholder="Journey Date" name="date" id="OnwardDate" class="form-control">
+									<input type="date" placeholder="Journey Date" name="date" id="OnwardDate" class="form-control">
 								</div>
 							</div>
 							<div class="col-md-2">
@@ -172,7 +172,7 @@ include 'include/headertype2.php';
 			<div class="panel panel-default" id="mypanelhead">
 				<div class="panel-heading" id="mypan">
 					<table class="table table-striped" id="mytable">
-						<form method="post" action="book_bus_user.php">
+						<form method="post" action="book_bus_user">
 						
 				<input type= "hidden" value = "<?=$date_bus?>" name = "date">
 						

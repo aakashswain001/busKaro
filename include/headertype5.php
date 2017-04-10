@@ -55,7 +55,7 @@
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="home.php">Home</a></li>
 										
-												<li><a href="include/signout.php" >Sign Out</a></li>
+												<li><a href="signout.php" >Sign Out</a></li>
 											</ul>
 										</div>
 

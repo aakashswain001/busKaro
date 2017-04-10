@@ -55,7 +55,7 @@
 											<ul class="nav navbar-nav navbar-right">
 												<li><a href="#contact">Contact</a></li>
 												<li><a href="user_profile.php">Profile</a></li>
-												<li><a href="include/signout.php" >Sign Out</a></li>
+												<li><a href="signout.php" >Sign Out</a></li>
 											</ul>
 										</div>
 

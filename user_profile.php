@@ -255,7 +255,7 @@ only screen and (max-width: 760px),
         	Reset Password:        	
         </div>
      <form method="post">   <div class="col-sm-8">
-        	<input type="Password" required name="changepass">
+        	<input type="Password" name="changepass">
         </div>
         <br>
         <br>
@@ -263,7 +263,7 @@ only screen and (max-width: 760px),
         	Confirm Password:        	
         </div>
         <div class="col-sm-8">
-        	<input type="Password" required name="confipass">
+        	<input type="Password" name="confipass">
         </div>
       </div>
       <br>

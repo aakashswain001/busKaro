@@ -104,7 +104,7 @@ WHERE id = $ex";
 				<form method="get">
 					<div class="lead text-center">
 						<div class="row" style="margin-top: 30px;">
-							<input type="text" required placeholder="Adhar Number" class="registerText" id="adharnumber" name="adhar">
+							<input type="text" placeholder="Adhar Number" class="registerText" id="adharnumber" name="adhar">
 						</div>
 						<div class="row">
 							<input type="text" required name="addr" placeholder="Address" class="registerText" id="address">

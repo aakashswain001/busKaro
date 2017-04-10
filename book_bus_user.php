@@ -319,7 +319,7 @@ if ( $result = mysqli_query( $con1, $sql ) ) {
 								<h1 style="padding-top:10px;">Please select a seat</h1>
 							</div>
 
-							<form method="post" action="payment.php">
+							<form method="post" action="payment">
 
 								<ol class="cabin fuselage">
 									<li class="row row--1">

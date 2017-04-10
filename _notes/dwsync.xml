@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name=".htaccess" server="C:/xampp/htdocs/busKaro/" local="131362816425260759" remote="131362816420000000" Dst="0" />
+<file name="book_bus_user.php" server="C:/xampp/htdocs/busKaro/" local="131362365699216512" remote="131362365690000000" Dst="0" />
+<file name="checkuser.php" server="C:/xampp/htdocs/busKaro/" local="131357628796506465" remote="131357628790000000" Dst="0" />
+<file name="confirm_pass_forget.php" server="C:/xampp/htdocs/busKaro/" local="131362403912483969" remote="131362403910000000" Dst="0" />
+<file name="dbconnect.php" server="C:/xampp/htdocs/busKaro/" local="131357628796736631" remote="131357628790000000" Dst="0" />
+<file name="dummy_payment.php" server="C:/xampp/htdocs/busKaro/" local="131361107366389977" remote="131361107360000000" Dst="0" />
+<file name="forgetpass.php" server="C:/xampp/htdocs/busKaro/" local="131362384897933438" remote="131362384890000000" Dst="0" />
+<file name="forgetpass_send_mail.php" server="C:/xampp/htdocs/busKaro/" local="131362397615667619" remote="131362397610000000" Dst="0" />
+<file name="form.html" server="C:/xampp/htdocs/busKaro/" local="131362365685367743" remote="131362365680000000" Dst="0" />
+<file name="get_data_newbus.php" server="C:/xampp/htdocs/busKaro/" local="131360910791837731" remote="131360910790000000" Dst="0" />
+<file name="home.php" server="C:/xampp/htdocs/busKaro/" local="131358441478758760" remote="131358441470000000" Dst="0" />
+<file name="index.php" server="C:/xampp/htdocs/busKaro/" local="131362365700647529" remote="131362365700000000" Dst="0" />
+<file name="New Text Document.txt" server="C:/xampp/htdocs/busKaro/" local="131362815876965992" remote="131362815870000000" Dst="0" />
+<file name="ostyle.css" server="C:/xampp/htdocs/busKaro/" local="131357628829591004" remote="131357628820000000" Dst="0" />
+<file name="ownerdash.php" server="C:/xampp/htdocs/busKaro/" local="131361890238460599" remote="131361890230000000" Dst="0" />
+<file name="owner_add_data.php" server="C:/xampp/htdocs/busKaro/" local="131358953415418723" remote="131358953410000000" Dst="0" />
+<file name="owner_profile.php" server="C:/xampp/htdocs/busKaro/" local="131361890237900569" remote="131361890230000000" Dst="0" />
+<file name="payment.php" server="C:/xampp/htdocs/busKaro/" local="131361099065906043" remote="131361099060000000" Dst="0" />
+<file name="query_send_mail.php" server="C:/xampp/htdocs/busKaro/" local="131362412788745770" remote="131362412780000000" Dst="0" />
+<file name="README.md" server="C:/xampp/htdocs/busKaro/" local="131357628795180430" remote="131357628790000000" Dst="0" />
+<file name="register.php" server="C:/xampp/htdocs/busKaro/" local="131357628831621454" remote="131357628830000000" Dst="0" />
+<file name="reg_send_mail.php" server="C:/xampp/htdocs/busKaro/" local="131361145103395384" remote="131361145100000000" Dst="0" />
+<file name="search_bus.php" server="C:/xampp/htdocs/busKaro/" local="131361110124432242" remote="131361110120000000" Dst="0" />
+<file name="signin.php" server="C:/xampp/htdocs/busKaro/" local="131357628831968555" remote="131357628830000000" Dst="0" />
+<file name="styleb.css" server="C:/xampp/htdocs/busKaro/" local="131357628831983564" remote="131357628830000000" Dst="0" />
+<file name="styleb1.css" server="C:/xampp/htdocs/busKaro/" local="131357628831998579" remote="131357628830000000" Dst="0" />
+<file name="user_add_data.php" server="C:/xampp/htdocs/busKaro/" local="131358440136956962" remote="131358440130000000" Dst="0" />
+<file name="user_profile.php" server="C:/xampp/htdocs/busKaro/" local="131361890238780633" remote="131361890230000000" Dst="0" />
+</dwsync>
