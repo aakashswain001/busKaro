@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<form action="dummy_payment.php" method="post">
 										<div class="tab-for">
 											<h5>NAME ON CARD</h5>
-											<input type="text" value="">
+											<input type="text" required value="">
 											<h5>CARD NUMBER</h5>
 											<input class="pay-logo" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required="">
 										</div>
@@ -172,10 +172,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<h5>EXPIRATION</h5>
 												<ul>
 													<li>
-														<input type="number" class="text_box" type="text" value="6" min="1"/>
+														<input type="number" required class="text_box" type="text" value="6" min="1"/>
 													</li>
 													<li>
-														<input type="number" class="text_box" type="text" value="1988" min="1"/>
+														<input type="number" required class="text_box" type="text" value="1988" min="1"/>
 													</li>
 
 												</ul>
