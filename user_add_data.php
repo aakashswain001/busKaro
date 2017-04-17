@@ -102,12 +102,12 @@ WHERE id = $ex";
 					<div class="lead text-center">
 				
 						<div class="row">
-							<input type="text" name="addr" placeholder="Address" class="registerText" id="address">
+							<input type="text" name="addr" required placeholder="Address" class="registerText" id="address">
 						</div>
 
 
 						<div class="row">
-							<input type="text" name="phone" placeholder="Mobile Number" class="registerText" id="mobile">
+							<input type="text" name="phone" required pattern="[0-9].{9}" title="Please Enter digits only of size 10" placeholder="Mobile Number" class="registerText" id="mobile">
 						</div>
 						<div class="row" style=" margin-left:250px margin-top:250px;">
 							<input type="submit" value="update" class="registerButton" id="registerButtonService" name="update">

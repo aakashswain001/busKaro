@@ -49,13 +49,13 @@ SET password = '$password' WHERE email = '$email'";
 		<div class="form-group">
 			<label for="To" class="control-label col-sm-2">Key:</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="text" id="email" name="fkey" class="form-control" >
+				<input type="text" required id="email" name="fkey" class="form-control" >
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="To" class="control-label col-sm-2">Password:</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="text" id="email" name="pass1" class="form-control" >
+				<input type="text" required id="email" name="pass1" class="form-control" >
 			</div>
 		</div>
      <input type="submit" class="btn-success" value="Submit" name="reset" style="margin-left: 200px;">

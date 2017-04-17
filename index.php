@@ -218,19 +218,19 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 					<div class="col-md-8 col-md-offset-2 object-non-visible" style="margin-top: 0px" data-animation-effect="fadeIn">
 						<div class="lead text-center">
 							<div class="row" style="margin-top: 30px;">
-								<input type="text" placeholder="First Name" required class="registerText" id="firstName" name="fname">
+								<input type="text" placeholder="First Name" required title="Enter the First Name" class="registerText" id="firstName" name="fname">
 							</div>
 							<div class="row">
-								<input type="text" placeholder="Last Name" required class="registerText" id="lastName" name="lname">
+								<input type="text" placeholder="Last Name" required title="Enter the Last Name" class="registerText" id="lastName" name="lname">
 							</div>
 							<div class="row">
-								<input type="email" placeholder="E-mail" required name="email" class="registerText" id="email">
+								<input type="email" placeholder="E-mail" required title="Please enter the E-mail" name="email" class="registerText" id="email">
 							</div>
 							<div class="row">
-								<input type="password" placeholder="Password" required class="registerText" id="password" name="password">
+								<input type="password" placeholder="Password" required title="Password must be entered" class="registerText" id="password" name="password">
 							</div>
 							<div class="row">
-								<input type="password" placeholder="Confirm Password" required class="registerText" id="cpassword">
+								<input type="password" placeholder="Confirm Password" required title="Confirmation password must be entered" class="registerText" id="cpassword">
 							</div>
 							<div class="row" style="margin-top: 30px;">
 								<input type="submit" value="Register as a Customer" class="registerButton" id="registerButtonCustomer" name="reg_customer">
@@ -371,7 +371,7 @@ if ( isset( $_POST[ 'signin2' ] ) ) {
 		</div>
 	</div>
 
-
+<a href="a_login.php"><button class="btn btn-default">Admin</button></a>
 	<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
 	<!-- Jquery and Bootstap core js files -->

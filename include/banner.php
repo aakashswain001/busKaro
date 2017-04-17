@@ -12,7 +12,7 @@
 							<div class="lead text-center">
 								<div class="row upperinput">
 									<div class="col-md-3 col-md-offset-1" style="justify-content: right">
-												<select name="frommm" class="inputText" placeholder="Source city"/>
+												<select name="frommm" required class="inputText" placeholder="Source city"/>
 									<?php
 									//include( 'db.php' );
 									$result = mysql_query( "SELECT id,name FROM city" );
@@ -34,7 +34,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-3 col-md-offset-1" style="justify-content: right">
-											<select name="tooo" class="inputText" placeholder="Source city"/>
+											<select name="tooo" required class="inputText" placeholder="Source city"/>
 									<?php
 									//include( 'db.php' );
 									$result = mysql_query( "SELECT id,name FROM city" );
@@ -66,7 +66,7 @@
 																	<i class="fa fa-calendar">
 																	</i>
 																</div>
-																<input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text" />
+																<input class="form-control" required id="date" name="date" placeholder="DD/MM/YYYY" type="text" />
 															</div>
 														</div>
 													</form>

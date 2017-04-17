@@ -104,18 +104,18 @@ WHERE id = $ex";
 				<form method="get">
 					<div class="lead text-center">
 						<div class="row" style="margin-top: 30px;">
-							<input type="text" placeholder="Adhar Number" class="registerText" id="adharnumber" name="adhar">
+							<input type="text" placeholder="Aadhar Number" title="Please Enter your Aadhar no." required class="registerText" id="adharnumber" name="adhar">
 						</div>
 						<div class="row">
-							<input type="text" required name="addr" placeholder="Address" class="registerText" id="address">
+							<input type="text" required title="Please enter the address" name="addr" placeholder="Address" class="registerText" id="address">
 						</div>
 
 
 						<div class="row">
-							<input type="text" required name="phone" placeholder="Mobile Number" class="registerText" id="mobile">
+							<input type="text" required pattern="[0-9].{9}" title="Please Enter digits only of size 10" name="phone" placeholder="Mobile Number" class="registerText" id="mobile">
 						</div>
 						<div class="row">
-							<input type="text" required name="servicename" placeholder="Bus Service Name" class="registerText" id="busname">
+							<input type="text" required title="Please enter the Bus Service Name" name="servicename" placeholder="Bus Service Name" class="registerText" id="busname">
 						</div>
 
 						<div class="row" style=" margin-left:250px margin-top:250px;">

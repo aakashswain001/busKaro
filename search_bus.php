@@ -153,7 +153,7 @@ include 'include/headertype2.php';
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<input type="date" placeholder="Journey Date" name="date" id="OnwardDate" class="form-control">
+									<input type="date" placeholder="Journey Date" required name="date" id="OnwardDate" class="form-control">
 								</div>
 							</div>
 							<div class="col-md-2">
@@ -265,7 +265,7 @@ include 'include/footer.php';
 										
 
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="email1" placeholder="Email" name="email">
+												<input type="email" required class="form-control" id="email1" placeholder="Email" name="email">
 											</div>
 										</div>
 										<div class="form-group">
@@ -276,7 +276,7 @@ include 'include/footer.php';
 
 
 											<div class="col-sm-10">
-												<input type="password" class="form-control" id="inputPassword1" placeholder="Password" name="password"/>
+												<input type="password" required class="form-control" id="inputPassword1" placeholder="Password" name="password"/>
 											</div>
 										</div>
 										<div class="row">
@@ -304,7 +304,7 @@ include 'include/footer.php';
 
 
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="email2" placeholder="Email" name="email2"/>
+												<input type="email" required class="form-control" id="email2" placeholder="Email" name="email2"/>
 											</div>
 										</div>
 										<div class="form-group">
@@ -315,7 +315,7 @@ include 'include/footer.php';
 
 
 											<div class="col-sm-10">
-												<input type="password" class="form-control" id="inputPassword2" placeholder="Password" name="password2"/>
+												<input type="password" required class="form-control" id="inputPassword2" placeholder="Password" name="password2"/>
 											</div>
 										</div>
 										<div class="row">

@@ -22,7 +22,7 @@
 		<div class="form-group">
 			<label for="To" class="control-label col-sm-2">Email:</label>
 			<div class="col-sm-3 col-lg-6">
-				<input type="email" id="email" name="email" class="form-control" >
+				<input type="email" id="email" required name="email" class="form-control" >
 			</div>
 		</div>
 		
